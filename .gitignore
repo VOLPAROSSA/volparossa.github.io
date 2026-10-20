@@ -1,0 +1,3 @@
+# Disposable browser profiles, preview screenshots and local server logs.
+.preview/
+__pycache__/
