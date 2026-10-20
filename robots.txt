@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://volparossa.org/sitemap.xml
