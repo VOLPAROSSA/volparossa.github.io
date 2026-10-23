@@ -65,6 +65,22 @@ strong { font-weight: 650; }
 .foundation-strip p { display: flex; flex-wrap: wrap; gap: .8rem; font-size: .85rem; }
 .foundation-strip p span { color: #8f7b57; }
 .foundation-strip a { color: var(--gold); }
+.weather-demo { display: grid; grid-template-columns: 1fr 1.12fr; gap: 3rem; align-items: center; padding-block: 60px; }
+.weather-demo > * { min-width: 0; }
+.demo-copy .eyebrow { color: var(--gold); margin-bottom: 18px; }
+.demo-copy h2 { font-size: clamp(2rem, 3.2vw, 3.2rem); }
+.demo-intro { margin-top: 20px; font-size: 1.12rem; }
+.demo-copy > p:not(.eyebrow, .demo-intro) { margin-top: 16px; color: #c9c4b6; font-size: .88rem; }
+.demo-links { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; margin-top: 20px; color: var(--gold); font-size: .8rem; }
+.demo-links a { padding-block: .3rem; }
+.demo-copy > p.demo-boundary, .demo-copy > p.demo-credits { font-size: .75rem; }
+.demo-boundary { border-top: 1px solid #484237; padding-top: 16px; }
+.demo-watch { display: block; border: 1px solid #62523a; text-decoration: none; }
+.demo-watch img { width: 100%; }
+.demo-watch > span { display: block; padding: 14px 18px; color: var(--gold); font-size: .92rem; font-weight: 600; }
+.demo-watch:hover > span { text-decoration: underline; }
+.demo-watch small { display: block; margin-top: 4px; color: #c9c4b6; font-size: .72rem; font-weight: 400; }
+.demo-preview figcaption { margin-top: 12px; color: #c9c4b6; font-size: .72rem; }
 .paper { background: var(--paper); color: var(--ink); }
 .section { padding-block: 100px; }
 .section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 5rem; margin-bottom: 46px; }
@@ -193,6 +209,7 @@ blockquote footer { margin-top: 28px; color: #c9c4b6; font-size: .7rem; }
   .brand { font-size: 1.05rem; }
   .hero { grid-template-columns: 1fr; gap: 34px; padding-top: 32px; padding-bottom: 40px; }
   .hero-copy { padding: 0; }
+  .weather-demo { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
   .hero .eyebrow { font-size: .61rem; }
   h1 { font-size: clamp(3.4rem, 12vw, 5.5rem); }
   .hero-intro { font-size: 1.03rem; margin-top: 24px; }
