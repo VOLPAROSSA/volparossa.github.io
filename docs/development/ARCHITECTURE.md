@@ -39,9 +39,15 @@ respect text reflow.
 
 Future project sites use `/volparossa-code/`, `/volparossa-image/`, etc. Their
 repository name remains in the path. `/code/` is not an automatic route.
-On 30 October 2026 the three featured project-site paths returned 404. Their
-CTAs therefore use the real GitHub repositories, selected by the registry's
-`published` flag. Set that flag only after verifying the production project site.
+The registry's `published` flag selects the project website or its GitHub
+repository. Set that flag only after verifying the production project site.
+Cloud was published on 30 October 2026 at
+`https://volparossa.org/volparossa-cloud/` by
+[Pages run 41131005030](https://github.com/VOLPAROSSA/volparossa-cloud/actions/runs/41131005030).
+Its live HTML and assets matched the production build in Chromium and Firefox,
+including mobile and 2560px desktop checks. Cloud's CTAs now open that site;
+the application directory also retains a separate source-repository link.
+Code and Image remain unpublished and their CTAs use their GitHub repositories.
 
 The reusable example at `examples/volparossa-application/` exercises nested asset
 paths. To bootstrap a genuinely independent site with its own asset directory:

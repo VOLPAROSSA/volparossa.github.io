@@ -12,7 +12,8 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://volparossa.org"
 PROJECTS = json.loads((ROOT / "site/data/projects.json").read_text())
-PUBLISHED_PROJECT_URLS = {p["publication_url"] for p in PROJECTS.values() if p["published"]}
+APPLICATIONS = json.loads((ROOT / "site/data/applications.json").read_text())
+PUBLISHED_PROJECT_URLS = {p["publication_url"] for p in [*PROJECTS.values(), *APPLICATIONS] if p["published"]}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 
