@@ -1,0 +1,266 @@
+[
+  {
+    "url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "status": 200,
+    "final_url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+  },
+  {
+    "url": "https://docs.immich.app/FAQ/",
+    "status": 200,
+    "final_url": "https://docs.immich.app/FAQ/"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/.github/blob/main/ACCESSIBILITY.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/.github/blob/main/ACCESSIBILITY.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/.github/blob/main/CODE_OF_CONDUCT.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/.github/blob/main/CODE_OF_CONDUCT.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/.github/blob/main/CONTRIBUTING.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/.github/blob/main/CONTRIBUTING.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa#governed-by-7-virtues",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa#governed-by-7-virtues"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-bank",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-bank"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-browser",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-browser"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-chat",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-chat"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-citizen",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-citizen"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-cloud",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-cloud"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-code",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-code"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-code/actions/runs/38824828727",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-code/actions/runs/38824828727"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-code/blob/main/docs/OPENCODE.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-code/blob/main/docs/OPENCODE.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-image",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-image"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-mail",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-mail"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-map",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-map"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-studio",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-studio"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa-weather",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa-weather"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa.github.io/blob/main/docs/development/ASSETS.md",
+    "status": 404
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa.github.io/issues",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa.github.io/issues"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/actions/runs/37218270756",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/actions/runs/37218270756"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/actions/runs/38717988016",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/actions/runs/38717988016"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/CONTRIBUTING.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/CONTRIBUTING.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/FAQ.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/FAQ.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/IMPLEMENTATION_STATUS.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/IMPLEMENTATION_STATUS.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/applications/APPLICATIONS.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/applications/APPLICATIONS.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/architecture/APPLICATION_LIFECYCLE.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/architecture/APPLICATION_LIFECYCLE.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/architecture/ARCHITECTURE.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/architecture/ARCHITECTURE.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/OVERVIEW.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/OVERVIEW.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/SUPPORTING.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/SUPPORTING.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/GOAL.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/GOAL.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/OPERATIONS.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/OPERATIONS.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/OPERATIONS.md#build-and-package",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/OPERATIONS.md#build-and-package"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/TESTING.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/TESTING.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/network/ROUTING.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/network/ROUTING.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/privacy/PRIVACY.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/privacy/PRIVACY.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/CONTENT_NETWORK_PROPOSAL.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/CONTENT_NETWORK_PROPOSAL.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/DECENTRALIZED_AGENTS.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/DECENTRALIZED_AGENTS.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/PRIVATE_STORAGE.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/PRIVATE_STORAGE.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/TRANSACTION_LAYER.md",
+    "status": 200,
+    "final_url": "https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/TRANSACTION_LAYER.md"
+  },
+  {
+    "url": "https://github.com/VOLPAROSSA/volparossa/discussions",
+    "status": 200,
+    "final_url": "https://github.com/orgs/VOLPAROSSA/discussions"
+  },
+  {
+    "url": "https://github.com/anomalyco/opencode/blob/dev/packages/web/src/assets/lander/screenshot.png",
+    "status": 200,
+    "final_url": "https://github.com/anomalyco/opencode/blob/dev/packages/web/src/assets/lander/screenshot.png"
+  },
+  {
+    "url": "https://github.com/immich-app/immich/blob/main/docs/static/img/screenshot-light.webp",
+    "status": 200,
+    "final_url": "https://github.com/immich-app/immich/blob/main/docs/static/img/screenshot-light.webp"
+  },
+  {
+    "url": "https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/create-rename-move/new-button.png",
+    "status": 200,
+    "final_url": "https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/create-rename-move/new-button.png"
+  },
+  {
+    "url": "https://github.com/search?q=org%3AVOLPAROSSA+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&type=issues",
+    "status": 200,
+    "final_url": "https://github.com/search?q=org%3AVOLPAROSSA+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&type=issues"
+  },
+  {
+    "url": "https://immich.app/",
+    "status": 200,
+    "final_url": "https://immich.app/"
+  },
+  {
+    "url": "https://opencloud.eu/",
+    "status": 200,
+    "final_url": "https://opencloud.eu/de"
+  },
+  {
+    "url": "https://opencloud.eu/en/press/terms-of-use",
+    "status": 200,
+    "final_url": "https://opencloud.eu/en/press/terms-of-use"
+  },
+  {
+    "url": "https://opencode.ai/",
+    "status": 200,
+    "final_url": "https://opencode.ai/"
+  },
+  {
+    "url": "https://opencode.ai/brand",
+    "status": 200,
+    "final_url": "https://opencode.ai/brand"
+  }
+]

@@ -1,3 +1,7 @@
 # Disposable browser profiles, preview screenshots and local server logs.
 .preview/
 __pycache__/
+
+# Optional QA dependencies and disposable results.
+node_modules/
+work/

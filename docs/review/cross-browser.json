@@ -1,0 +1,66 @@
+[
+  {
+    "name": "firefox",
+    "version": "153.0",
+    "width": 390,
+    "path": "/",
+    "overflow": false,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "153.0",
+    "width": 390,
+    "path": "/docs/",
+    "overflow": false,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "153.0",
+    "width": 390,
+    "path": "/applications/",
+    "overflow": false,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "153.0",
+    "width": 1440,
+    "path": "/",
+    "overflow": false,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "153.0",
+    "width": 1440,
+    "path": "/docs/",
+    "overflow": false,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "153.0",
+    "width": 1440,
+    "path": "/applications/",
+    "overflow": false,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "name": "webkit",
+    "unavailable": "browserType.launch: \n╔══════════════════════════════════════════════════════╗\n║ Host system is missing dependencies to run browsers. ║\n║ Missing libraries:                                   ║\n║     libgtk-4.so.1                                    ║\n║     libgraphene-1.0.so.0                             ║\n║     libharfbuzz-icu.so.0                             ║\n║     libmanette-0.2.so.0                              ║\n║     libhyphen.so.0                                   ║\n║     libGLESv2.so.2                                   ║\n╚══════════════════════════════════════════════════════╝"
+  },
+  {
+    "name": "Chromium",
+    "test": "independent repository subpath",
+    "failures": [],
+    "fonts": true
+  }
+]

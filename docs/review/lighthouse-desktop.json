@@ -1,0 +1,42 @@
+{
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-10-30T13:29:23.684Z",
+  "formFactor": "desktop",
+  "throttlingMethod": "simulate",
+  "throttling": {
+    "rttMs": 40,
+    "throughputKbps": 10240,
+    "requestLatencyMs": 0,
+    "downloadThroughputKbps": 0,
+    "uploadThroughputKbps": 0,
+    "cpuSlowdownMultiplier": 1
+  },
+  "categories": {
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 250.59875,
+      "display": "0.3\u00a0s"
+    },
+    "largest-contentful-paint": {
+      "value": 887.1975,
+      "display": "0.9\u00a0s"
+    },
+    "total-blocking-time": {
+      "value": 0,
+      "display": "0\u00a0ms"
+    },
+    "cumulative-layout-shift": {
+      "value": 0.002933750484617155,
+      "display": "0.003"
+    },
+    "total-byte-weight": {
+      "value": 946629,
+      "display": "Total size was 924\u00a0KiB"
+    }
+  }
+}

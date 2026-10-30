@@ -1,88 +1,82 @@
-# VOLPAROSSA public website
+# VOLPAROSSA — The Library of Tomorrow
 
-The public entry point at **https://volparossa.org/**. This is a buildless,
-responsive HTML/CSS site for the project's purpose, five shared layers,
-application family and source-bound development evidence. It has no JavaScript,
-package manager, remote fonts, analytics or third-party embeds.
+The public website at **https://volparossa.org/**: a visual library homepage,
+central documentation entrance and compact application directory. All visitor
+content is English. Original application/Core code is unchanged.
 
-## Preview and check
+## Build and preview
 
-From this repository, with Python 3 available:
+Python 3 is the only build dependency. Generated HTML is committed for the
+existing GitHub Pages `main` / root publication source.
 
 ```sh
+python3 scripts/build_site.py
 python3 scripts/check_site.py
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8000/`. Use HTTP even for local preview because asset links
-are root-relative. Stop the server with Ctrl-C. The check script does not fetch
-links, start services, install tools, or modify anything. To inspect its external
-link inventory, use `python3 scripts/check_site.py --external-list`.
+Open `http://127.0.0.1:8000/`. The site works without JavaScript. The check is
+network-free and verifies pages, local links/fragments, metadata, semantic
+structure, asset paths, the app registry, publication fallbacks and byte budgets.
+Use `--external-list` for a link inventory.
 
-Check the rendered page at narrow mobile (320 and 390 CSS pixels), tablet and
-desktop widths. Check keyboard navigation, the skip link and visible focus,
-200% text zoom, contrast, reduced motion and forced-color settings. All content
-and links work without JavaScript. These source checks and manual checks are
-not a WCAG conformance audit, real-device coverage or product runtime evidence.
-Disposable profiles, logs and preview screenshots can live in ignored `.preview/`.
+## Maintain
 
-## Maintain the content
+- `site/pages/`: semantic page bodies, including docs, applications and policies.
+- `site/templates/`: shared head, navigation, footer and active states.
+- `site/data/applications.json`: one app registry; unpublished sites link to GitHub.
+- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.0 and optional menu enhancement.
+- `assets/library/`: responsive library imagery and mobile crops, generated from the approved references.
+- `scripts/build_site.py`: deterministic standard-library generation.
+- `scripts/export_theme.py`: versioned, self-contained theme export for future project repositories.
 
-- `index.html`: content and semantic structure. Keep one `h1`, descriptive links,
-  a usable skip link, image alternatives, explicit dimensions and heading order.
-- `assets/site.css`: responsive layout, system fonts, visible focus, reduced
-  motion, forced-color support and print treatment. No build step.
-- `assets/compass.svg`: small original geometric compass favicon and site mark.
-- `assets/gathering-800.jpg`, `assets/gathering-1600.jpg`: responsive brand artwork.
-- `assets/social.jpg`: 1200 × 600 social preview. Keep Open Graph and card metadata
-  aligned with this asset, the title, description and canonical production URL.
-- `robots.txt`, `sitemap.xml`: discovery metadata. Update `lastmod` when changing
-  public content. `CNAME` remains `volparossa.org`; `.nojekyll` serves the tree as
-  plain static files. Preserve existing Pages configuration, custom domain,
-  HTTPS enforcement and DNS. This repository adds no deployment workflow.
+Run the build after editing sources and commit both sources and generated pages.
+Keep `CNAME=volparossa.org`, `.nojekyll`, HTTPS and the existing Pages source.
+No deployment workflow, DNS change, tracker, backend or cookie banner is added.
 
-Use the [complete agreed goal](https://github.com/VOLPAROSSA/volparossa/blob/main/docs/development/GOAL.md)
-and [current evidence ledger](https://github.com/VOLPAROSSA/volparossa/blob/main/docs/IMPLEMENTATION_STATUS.md#current-integration-and-active-work)
-as the authorities. This page is a **20 October 2026 snapshot**, not a second
-execution plan. Update its date only after reviewing current source and original
-results. Keep scoped demonstrations, research, failed trials, and goals distinct.
-Link the original evidence and its exact-source record; a later passing source
-check does not replace a failed application or confidential-computing trial.
-Do not imply a supported release, completed applications, privacy guarantees,
-financial authorization, real-person voting or measured efficiency gains.
+Read the [design decisions](docs/development/DESIGN.md),
+[architecture and reuse](docs/development/ARCHITECTURE.md),
+[asset/rights register](docs/development/ASSETS.md),
+[content sources](docs/development/CONTENT.md) and
+[verification report](docs/development/VERIFICATION.md).
+Review renders are in [docs/review](docs/review).
 
-Keep shared contribution, support, conduct and accessibility guidance in
-[VOLPAROSSA/.github](https://github.com/VOLPAROSSA/.github), rather than duplicating
-it here. Funding information belongs in the core's
-[public supporting guide](https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/SUPPORTING.md).
-Sponsorship is pending; do not add a payment endpoint without independently
-confirmed public authorization. Contribution to the network is not a payment.
+## Content and publication boundaries
 
-External links are ordinary navigation, not embedded connections. Visitors make
-hosting requests to GitHub Pages, which has its own request logging and privacy
-policy. Do not describe an absence of site-added analytics as an absence of all
-hosting logs. There is currently no cookie consent interface because the site
-adds no cookies or tracking services.
+Applications remain development integrations or research. Dated trials retain
+their exact-source scope; they do not establish a supported release, complete
+private-storage maintenance or confidential peer computation. The linked Core
+implementation ledger remains authoritative. No payment offer is created.
 
-## Artwork provenance and license
+Public builds use text acknowledgements for unresolved Immich/OpenCloud logo
+promotion. An isolated review build can show the original provided marks; see
+the architecture note. Upstream screen excerpts are attributed examples, not
+VOLPAROSSA integration evidence. No private user data is used.
 
-The existing VOLPAROSSA organization artwork was copied from
-`VOLPAROSSA/.github`, `profile/assets/banner_volparossa.png`, source revision
-`3dd14afef7e7a1e08f6a46ae9424542a9400ae3d` (inspected local clone).
-Source dimensions: 1774 × 887; source SHA-256:
+The website is materially AI-assisted: code, copy and new environment artwork
+were prepared with AI, then checked in real browsers. The original project
+[GPL-3.0-only license](LICENSE) is unchanged. Fonts, upstream marks and interface
+images retain separate notices and rights in the asset register.
+
+The replaced prototype artwork originated in `VOLPAROSSA/.github` at
+`3dd14afef7e7a1e08f6a46ae9424542a9400ae3d`, original SHA-256
 `f9300dd5cd7c725905a11c43db6e855cb765e221b1f0e7e5a0db5218b2f23f27`.
-The artwork shows a wolf, compass map, lanterns and a shared worktable with the
-VOLPAROSSA wordmark. It was reused, not newly generated for this website.
+It is no longer used; its original provenance remains recorded here and in Git.
 
-The three JPEG derivatives preserve the composition. They were scaled with the
-already-available GdkPixbuf library, using bilinear interpolation: 1600 × 800
-(JPEG quality 88), 800 × 400 (quality 85), and 1200 × 600 (quality 88). No tools
-were installed. The original 3 MB PNG is not shipped to visitors. The responsive
-hero is approximately 108 KB on small screens or 410 KB at its larger size;
-the separate social asset is approximately 255 KB. The precise byte inventory is
-printed by the local check. Preserve the upstream artwork's provenance when
-replacing or redistributing it.
+## Optional browser QA
 
-The original repository [GPL-3.0-only license](LICENSE) is preserved. Application
-names identify independent integrations; they do not imply upstream endorsement
-and do not change the applications' own licenses and notices.
+With Node.js 22.19+ and an installed browser, install the pinned development
+utilities with `npm ci`. They are not shipped to visitors and are not needed
+for static builds. Start the local server, then run:
+
+```sh
+CHROME_PATH=/usr/bin/chromium npm run qa
+```
+
+Omit `CHROME_PATH` to use Playwright's separately installed Chromium. The checker
+covers all eight rendered routes at 320, 390, 768, 1440 and 1920 pixels, axe at
+mobile/desktop widths, keyboard/menu use, no JavaScript, reduced motion and
+200% text enlargement. Results go to ignored `work/qa/`. Override `SITE_QA_URL`
+and `SITE_QA_OUTPUT` when needed. Screenshot/accessibility capture expands
+content-visibility regions so below-fold content is included in the inspection;
+normal responsive checks retain the optimization.
