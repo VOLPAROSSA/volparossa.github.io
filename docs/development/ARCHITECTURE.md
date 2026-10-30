@@ -1,4 +1,4 @@
-# Static publishing and shared design v1.0.1
+# Static publishing and shared design v1.0.2
 
 `site/pages/` contains page bodies. `site/templates/` owns the common HTML head,
 navigation and footer. `site/data/applications.json` is the single application
@@ -25,6 +25,15 @@ three photo crops. CSS projection maps each complete interface image onto its
 four aperture corners without visitor JavaScript. `object-fit: contain` keeps
 all screenshot content visible. Keep the source crop and viewBox synchronized
 when replacing artwork. Do not restore independent viewport-percentage offsets.
+
+The shared status component renders as a bordered pill on the homepage and
+application index, with a dark variant in the hero. Upstream logo slots preserve
+the supplied SVG proportions and clear space. The GitHub mark is embedded from
+`assets/icons/github.svg`; its MIT notice travels with the exported design.
+The final section displays the existing chapter artwork across 64% of the desktop
+section, feathered into the paper background with a CSS mask. At 800px and below,
+it stacks beneath the copy with a vertical fade; both versions remain static and
+respect text reflow.
 
 ## Independent application repositories
 

@@ -10,7 +10,8 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://volparossa.org'
 CORE = 'https://github.com/VOLPAROSSA/volparossa'
-VERSION = '1.0.1'
+VERSION = '1.0.2'
+GITHUB_ICON = (ROOT/'assets/icons/github.svg').read_text().strip().replace('<svg ', '<svg class="github-icon" aria-hidden="true" focusable="false" ', 1)
 
 def render(text, values):
     return re.sub(r'\{\{(\w+)\}\}', lambda m: str(values[m[1]]) if m[1] in values else m[0], text)
@@ -122,8 +123,8 @@ def build(output, text_brands=False):
         links={k:root+v for k,v in [('home',''),('docs','docs/'),('applications','applications/'),('contribute','contribute/'),('privacy','privacy/'),('accessibility','accessibility/'),('credits','credits/')]}
         if name=='example': links={k:ORIGIN+'/'+v.removeprefix(root) for k,v in links.items()}
         nav=[('Discover',links['home']+'#discover'),('Applications',links['applications']),('Documentation',links['docs']),('Get involved',links['contribute']),('GitHub ↗','https://github.com/VOLPAROSSA')]
-        nav_links=''.join(f'<a href="{u}"'+(' aria-current="page"' if (name=='docs' and label=='Documentation') or (name=='applications' and label=='Applications') or (name=='contribute' and label=='Get involved') else '')+(' class="github-link"' if label.startswith('GitHub') else '')+f'>{label}</a>' for label,u in nav)
-        vals=dict(root=root,title=escape(title),description=escape(description),canonical=ORIGIN+'/'+path,body_class='home' if name=='home' else 'interior',nav_links=nav_links,head_extra='<meta name="robots" content="noindex">' if name in ('404','example') else '',**links)
+        nav_links=''.join(f'<a href="{u}"'+(' aria-current="page"' if (name=='docs' and label=='Documentation') or (name=='applications' and label=='Applications') or (name=='contribute' and label=='Get involved') else '')+(' class="github-link"' if label.startswith('GitHub') else '')+f'>{GITHUB_ICON if label.startswith("GitHub") else ""}{label}</a>' for label,u in nav)
+        vals=dict(root=root,title=escape(title),description=escape(description),canonical=ORIGIN+'/'+path,body_class='home' if name=='home' else 'interior',nav_links=nav_links,github_icon=GITHUB_ICON,head_extra='<meta name="robots" content="noindex">' if name in ('404','example') else '',**links)
         vals['header']=render((ROOT/'site/templates/header.html').read_text(),vals)
         vals['footer']=render((ROOT/'site/templates/footer.html').read_text(),vals)
         vals.update(hero_picture=picture('hero',hero=True),worktable_picture=picture('worktable',cls='table-scene')+screens(),shared_picture=picture('shared'),chapter_picture=picture('chapter'),featured_apps=''.join(featured(a,text_brands) for a in apps if a.get('featured')),layers=layers(),doc_cards=doc_cards(),application_rows=app_rows(apps))

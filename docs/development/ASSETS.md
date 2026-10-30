@@ -3,7 +3,8 @@
 The supplied mockups are design references, never a page-sized screenshot with
 hotspots. All headings, copy, buttons and status labels are semantic HTML.
 `02-applications-worktable-FINAL.png` takes precedence over section 2 in reference
-01. The original logo is not traced or redrawn.
+01. Original logo files remain unchanged. The owner-requested illustration edit uses
+the supplied emblem as the reference for a physical gold print on the mug.
 
 ## VOLPAROSSA artwork
 
@@ -12,7 +13,7 @@ hotspots. All headings, copy, buttons and status labels are semantic HTML.
 | `assets/logo-original.png` | Exact pixel/alpha content of supplied `03-volparossa-logo-original.png`, 853×853 RGBA. Original retained. |
 | `assets/logo.png`, `assets/favicon.png`, `favicon.ico` | Technical resizes only; shape, colour and transparency preserved. |
 | `assets/library/hero-*` | New clean image generation from the top library scene in reference 01. Separate portrait mobile composition preserves the arch and resting fox. |
-| `assets/library/worktable-*`, `{code,image,cloud}-mobile.*` | New clean image generation from reference 02; blank device displays. Desktop crop is 1536×710; mobile crops follow each workstation. Interface layers remain separate. |
+| `assets/library/worktable-*`, `{code,image,cloud}-mobile.*` | New clean image generation from reference 02; blank device displays. Owner-requested image edit adds a gold VOLPAROSSA emblem to the ceramic mug. The lossless 1536×710 `worktable-master.png` retains the edited scene for future exports; WebP/JPEG desktop and mobile variants use the existing coordinates. Interface layers remain separate. |
 | `assets/library/shared-*` | New clean generation of reference 01's cooperative reading table. |
 | `assets/library/chapter-*` | New clean generation of reference 01's closing fox balcony. |
 | `assets/social.jpg` | 1200×630 technical crop of the new hero. |
@@ -21,6 +22,8 @@ Artwork was generated with OpenAI image generation on 30 October 2026. The
 original generation prompts requested the approved composition/materials, no
 text or logos, and empty device displays. Optimized AVIF (hero), WebP/JPEG variants and
 mobile crops are committed; generation is not a visitor runtime dependency.
+The subsequent mug edit used the original logo and worktable as image-generation
+references; it is baked into the illustration, with no link or HTML logo overlay.
 No stock image substitutes the library. No private files or visitor data are used.
 
 ## Interface images
@@ -62,6 +65,16 @@ visible in this register: any commercial use of OpenCloud visual material still
 requires the prior written consent described in its terms, and Immich's commercial
 integration/reseller conditions still apply. `--text-brands` provides a clean
 fallback for a publication context that requires text-only attribution.
+
+## GitHub navigation mark
+
+`assets/icons/github.svg` is the unchanged `mark-github-16.svg` from
+[GitHub Primer Octicons](https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg).
+The [MIT notice](../../assets/icons/OCTICONS-LICENSE.txt) accompanies the asset and
+is copied with the shared theme export. The builder embeds the original path,
+adding decorative accessibility attributes; CSS uses the surrounding link colour.
+It precedes the GitHub label in desktop/mobile navigation and the footer. No
+external icon service or font is loaded, and link names remain readable text.
 
 ## Fonts
 

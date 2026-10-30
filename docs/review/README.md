@@ -4,7 +4,7 @@ These are renders of the implemented HTML/CSS site in Chromium, not imagegen
 concepts. The full-page captures expand off-screen content-visibility regions
 and scroll through all lazy images before capture; interactive checks retain
 normal rendering behaviour. DPR 1, desktop 1440 CSS pixels, mobile 390 pixels. Homepage and worktable
-captures are updated for the desktop correction (design 1.0.1).
+captures are updated for the visual finishing update (design 1.0.2).
 
 - [Full desktop page](desktop.webp)
 - [Full mobile page](mobile.webp)
@@ -18,7 +18,10 @@ captures are updated for the desktop correction (design 1.0.1).
 - [Firefox worktable at 2560 pixels](firefox-2560-worktable.webp)
 - [Firefox mobile worktable](firefox-mobile-worktable.webp)
 - [Scene regression results, 320–3840 pixels](scene-results.json)
-- [Current Lighthouse metrics](scene-performance.json)
+- [Closing scene on desktop](invitation-desktop.webp)
+- [Closing scene on mobile](invitation-mobile.webp)
+- [Current mobile Lighthouse metrics](finishing-performance.json)
+- [Previous desktop-correction Lighthouse metrics](scene-performance.json)
 
 The older `upstream-brand-review.webp` remains a historical preview. Current
 public output displays all three original marks with attribution.

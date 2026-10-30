@@ -11,6 +11,14 @@
     "bytes": 23664,
     "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
   },
+  "assets/icons/OCTICONS-LICENSE.txt": {
+    "bytes": 1068,
+    "sha256": "da259c8bd0de62713ccdcf88910aebca810644f98c2c912bad814fc79ea778df"
+  },
+  "assets/icons/github.svg": {
+    "bytes": 822,
+    "sha256": "7421820090b50ac79d7c2bf7c951a433d7098a8a9c474809207bdd45f62d9d46"
+  },
   "assets/library/chapter-1536.jpg": {
     "bytes": 528956,
     "sha256": "ab012a4a060f2ce26aa497c65d4e6b7ea23f3f8f22fcb9f0da216dc8eb8cfd30"
@@ -28,20 +36,20 @@
     "sha256": "dcaf75e1df1b2271c49f310a2425f227881186fcace968b0591a6acdfbe69a7a"
   },
   "assets/library/cloud-mobile.jpg": {
-    "bytes": 57737,
-    "sha256": "6297df22ef9594288c64b62a0eff48f66415de8c1aefc23f1f7a7a53c54b55a7"
+    "bytes": 57643,
+    "sha256": "f09ea8a5b037460dd33cc3c009b0bc4bf5349633bd6853ba0a2d082a77135a57"
   },
   "assets/library/cloud-mobile.webp": {
-    "bytes": 44210,
-    "sha256": "13142b9286a799ff72a4fb42504e18d7772b10cfc93dd7f89c840df003295315"
+    "bytes": 44220,
+    "sha256": "0122fc2d154ae61ae93e7e2ab25bb8d03bbf849cf9006c486b87656d6d497e64"
   },
   "assets/library/code-mobile.jpg": {
-    "bytes": 69909,
-    "sha256": "ac56f08363f2cb106cf53e7816a57937f845e57ff6268748f6d5f179de4e81eb"
+    "bytes": 70711,
+    "sha256": "ba8ef31804a0ece2c86aaf0f58de8ccef4d981d1716984d06db359eefeb30b6e"
   },
   "assets/library/code-mobile.webp": {
-    "bytes": 50982,
-    "sha256": "02b5ee043dd87fff7a90cc39bd67e8580a20462349d2e0c2d44aa3e113379a90"
+    "bytes": 53078,
+    "sha256": "6f9698607e6f51f89c757817cab7c1de293c6dcb419cda0a73807800ca125c40"
   },
   "assets/library/hero-1536.avif": {
     "bytes": 220215,
@@ -80,12 +88,12 @@
     "sha256": "6400b560b6b50932518570d6002e55b76a9d7b6ff476795d0a4d3d274076f706"
   },
   "assets/library/image-mobile.jpg": {
-    "bytes": 58251,
-    "sha256": "43ca84da8a442fe97d920e9dfa0b4d4384de334f33fff5aca95cc6e913db6fa2"
+    "bytes": 58236,
+    "sha256": "4af039568a323829e517425ca53808f159c3c9adf9a4e54cb338c4467a0367b6"
   },
   "assets/library/image-mobile.webp": {
-    "bytes": 44632,
-    "sha256": "3e01bd6a4fc0aff91369de1e11178523fe324e406eb4c6e424564f53387a3540"
+    "bytes": 44314,
+    "sha256": "a76042739b45582bfe57b2fcbadbdc8f0c8eeb750604252a16ac6c441b49b267"
   },
   "assets/library/shared-1536.jpg": {
     "bytes": 402224,
@@ -104,20 +112,24 @@
     "sha256": "a149b8c835c0ea1dc8fa6745069ac53b0e35141317030d1cbae81923705f2798"
   },
   "assets/library/worktable-1536.jpg": {
-    "bytes": 233823,
-    "sha256": "1dbb68ba86c04f2b840e3c619355c62f714f39b8c86699734680d3442dd447c5"
+    "bytes": 241057,
+    "sha256": "01cb7cb89d19911520aeab26a35a408d6a39548b724b660a01de186729532072"
   },
   "assets/library/worktable-1536.webp": {
-    "bytes": 179704,
-    "sha256": "0fcae4e1adbd928ace15bd737d0adf39e920d544a18c01f574f1f86b78755eaa"
+    "bytes": 182294,
+    "sha256": "71d535df04e80ecd55f48b8d4d2ebc87620bf07ea0371468f0d22e2d50ff2cc6"
   },
   "assets/library/worktable-768.jpg": {
-    "bytes": 79559,
-    "sha256": "eaeabe918ed72bd97dc8874916f79af649dfcb90f52c4344a97c5f3a9333f888"
+    "bytes": 82676,
+    "sha256": "4c2dbb97799a12f0e04ec8862179e77f5089756289e8bd0f1adef1502fee6de2"
   },
   "assets/library/worktable-768.webp": {
-    "bytes": 69472,
-    "sha256": "e4993a95e477c4eb6b1e0c8eef6a79c7d580f9dcd92a9754db76ef6d2731969c"
+    "bytes": 71638,
+    "sha256": "9915136b00ff7e766e32f9d00abb82aedac546e5c502bdba9803485d52beb4bc"
+  },
+  "assets/library/worktable-master.png": {
+    "bytes": 1433241,
+    "sha256": "c65273cb3fe3eb3ea3e2ef1bc61eff27e502f5c7e599306795ff8805863144f1"
   },
   "assets/logo-original.png": {
     "bytes": 271239,
