@@ -1,4 +1,4 @@
-# Static publishing and shared design v1.0.0
+# Static publishing and shared design v1.0.1
 
 `site/pages/` contains page bodies. `site/templates/` owns the common HTML head,
 navigation and footer. `site/data/applications.json` is the single application
@@ -9,16 +9,22 @@ is no framework, runtime templating, database or package install for production.
 Run `python3 scripts/build_site.py`, then `python3 scripts/check_site.py`.
 The generated pages are served directly by the existing GitHub Pages source:
 `main`, `/`, custom domain `volparossa.org`. CNAME and HTTPS settings are unchanged.
-The public output uses textual Immich/OpenCloud acknowledgements. For an isolated
-review with the supplied original marks:
+The public output includes the original upstream marks, as requested by the owner
+in the desktop-render correction. Attribution and the conditions for future use
+remain in the asset register. A text-only variant remains available for contexts
+that require it:
 
 ```sh
-python3 scripts/build_site.py --output /tmp/volparossa-brand-review --preview-brands
-python3 -m http.server 8001 --bind 127.0.0.1 --directory /tmp/volparossa-brand-review
+python3 scripts/build_site.py --output work/text-brands --text-brands
 ```
 
-That flag is a review aid, not a determination of trademark permission. Never
-copy that output to production without resolving the asset-register points.
+Desktop hero height follows the intrinsic image ratio. Worktable screen apertures
+are measured once in `SCREENS` in `scripts/build_site.py`. An SVG viewBox scales
+that coordinate plane together with the source photo; mobile viewBoxes match the
+three photo crops. CSS projection maps each complete interface image onto its
+four aperture corners without visitor JavaScript. `object-fit: contain` keeps
+all screenshot content visible. Keep the source crop and viewBox synchronized
+when replacing artwork. Do not restore independent viewport-percentage offsets.
 
 ## Independent application repositories
 

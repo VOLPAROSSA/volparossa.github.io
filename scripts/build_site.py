@@ -10,7 +10,7 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://volparossa.org'
 CORE = 'https://github.com/VOLPAROSSA/volparossa'
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 def render(text, values):
     return re.sub(r'\{\{(\w+)\}\}', lambda m: str(values[m[1]]) if m[1] in values else m[0], text)
@@ -24,20 +24,51 @@ def picture(name, root='', cls='scene', hero=False):
     attrs = 'fetchpriority="high" loading="eager"' if hero else 'loading="lazy" decoding="async"'
     return f'<picture class="{cls}">{mobile}{modern}<source type="image/webp" srcset="{root}assets/library/{name}-768.webp 768w, {root}assets/library/{name}-1536.webp 1536w" sizes="100vw"><img src="{root}assets/library/{name}-1536.jpg" srcset="{root}assets/library/{name}-768.jpg 768w, {root}assets/library/{name}-1536.jpg 1536w" sizes="100vw" alt="" width="1536" height="{height}" {attrs}></picture>'
 
-def screen(app, cls=''):
-    width, height = {'code': (800,557), 'image': (900,307), 'cloud': (1000,324)}[app]
-    return f'<img class="screen screen-{app} {cls}" src="assets/upstream/{app}-screen.webp" width="{width}" height="{height}" alt="" loading="lazy" decoding="async">'
+# Screen apertures measured in the original 1536 × 710 worktable image.
+# All desktop and mobile layers share this coordinate system; mobile viewBoxes
+# match the source crops exactly. The screenshots themselves are never cropped.
+SCREENS = {
+    'code': ((440, 240), ((100, 252), (539, 253), (539, 491), (90, 491))),
+    'image': ((280, 182), ((630, 372), (904, 370), (919, 550), (628, 555))),
+    'cloud': ((280, 202), ((1114, 342), (1387, 338), (1408, 535), (1128, 545))),
+}
+MOBILE_CROPS = {'code': (0, 150, 600, 560), 'image': (550, 240, 500, 470), 'cloud': (1050, 230, 486, 480)}
 
-def featured(app, preview):
+def screen_transform(size, corners):
+    """Project a rectangular image plane onto the four measured aperture corners."""
+    w, h = size
+    (x0,y0),(x1,y1),(x2,y2),(x3,y3) = corners
+    dx1, dx2, dx3 = x1-x2, x3-x2, x0-x1+x2-x3
+    dy1, dy2, dy3 = y1-y2, y3-y2, y0-y1+y2-y3
+    denominator = dx1*dy2-dx2*dy1
+    g = (dx3*dy2-dx2*dy3)/denominator
+    k = (dx1*dy3-dx3*dy1)/denominator
+    matrix = ((x1-x0+g*x1)/w, (y1-y0+g*y1)/w, 0, g/w,
+              (x3-x0+k*x3)/h, (y3-y0+k*y3)/h, 0, k/h,
+              0, 0, 1, 0, x0, y0, 0, 1)
+    return 'matrix3d('+','.join(f'{v:.10g}' for v in matrix)+')'
+
+def screens(app=None):
+    crop = MOBILE_CROPS[app] if app else (0, 0, 1536, 710)
+    images = []
+    for ident in ([app] if app else SCREENS):
+        size, corners = SCREENS[ident]
+        w,h = size
+        images.append(f'<img xmlns="http://www.w3.org/1999/xhtml" class="screen screen-{ident}" src="assets/upstream/{ident}-screen.webp" width="{w}" height="{h}" style="width:{w}px;height:{h}px;transform:{screen_transform(size,corners)}" alt="" loading="lazy" decoding="async">')
+    # SVG scales the fixed coordinate plane, including its CSS perspective,
+    # uniformly with the photograph. No viewport arithmetic or runtime JS.
+    return f'<svg class="device-screens {"mobile-screens" if app else "panorama-screens"}" viewBox="{" ".join(map(str,crop))}" width="{crop[2]}" height="{crop[3]}" aria-hidden="true" focusable="false"><foreignObject x="0" y="0" width="1536" height="710">'+''.join(images)+'</foreignObject></svg>'
+
+def featured(app, text_brands):
     ident, name, upstream = app['id'], app['name'], app['upstream']
     mobile_width, mobile_height = {'code': (600,560), 'image': (500,470), 'cloud': (486,480)}[ident]
     logo = ''
-    if ident == 'code' or preview:
+    if not text_brands:
         file = {'code':'opencode','image':'immich','cloud':'opencloud'}[ident]
-        logo = f'<img src="assets/upstream/{file}.svg" width="{126 if ident == "cloud" else 30}" height="42" alt="" class="{"wide-logo" if ident == "cloud" else ""}">'
+        logo = f'<span class="upstream-mark"><img src="assets/upstream/{file}.svg" width="{126 if ident == "cloud" else 30}" height="42" alt="" class="{"wide-logo" if ident == "cloud" else ""}"></span>'
     mark = f'<a class="upstream {"" if logo else "fallback"}" href="{app["upstream_url"]}">{logo}<span>Built on {upstream}</span></a>'
     return f'''<article class="app-card {ident}" aria-labelledby="app-{ident}">
-<div class="device-view"><picture class="mobile-device"><source type="image/webp" media="(max-width: 650px)" srcset="assets/library/{ident}-mobile.webp"><img src="assets/library/{ident}-mobile.jpg" width="{mobile_width}" height="{mobile_height}" alt="" loading="lazy" decoding="async"></picture>{screen(ident)}</div>
+<div class="device-view"><picture class="mobile-device"><source type="image/webp" media="(max-width: 650px)" srcset="assets/library/{ident}-mobile.webp"><img src="assets/library/{ident}-mobile.jpg" width="{mobile_width}" height="{mobile_height}" alt="" loading="lazy" decoding="async"></picture>{screens(ident)}</div>
 <div class="app-content"><h3 id="app-{ident}">{name}</h3><p class="tagline">{app['tagline']}</p>{mark}<p class="app-description">{escape(app['description'])}</p><span class="status">{app['status']}</span><a class="button primary" href="{app['publication_url'] if app['published'] else app['repository']}">Explore {name} <span aria-hidden="true">→</span></a><p class="app-destination">Project repository · GitHub ↗</p></div></article>'''
 
 ICONS = {
@@ -81,7 +112,7 @@ PAGES = {
 '404.html':('404','Page not found — VOLPAROSSA','Find your way back to the VOLPAROSSA homepage or central documentation.'),
 'examples/volparossa-application/':('example','Application layout example — VOLPAROSSA','A reusable VOLPAROSSA page shell demonstrating local assets beneath a repository subpath.')}
 
-def build(output, preview=False):
+def build(output, text_brands=False):
     apps=json.loads((ROOT/'site/data/applications.json').read_text())
     for path,(name,title,description) in PAGES.items():
         depth=path.count('/')
@@ -92,10 +123,10 @@ def build(output, preview=False):
         if name=='example': links={k:ORIGIN+'/'+v.removeprefix(root) for k,v in links.items()}
         nav=[('Discover',links['home']+'#discover'),('Applications',links['applications']),('Documentation',links['docs']),('Get involved',links['contribute']),('GitHub ↗','https://github.com/VOLPAROSSA')]
         nav_links=''.join(f'<a href="{u}"'+(' aria-current="page"' if (name=='docs' and label=='Documentation') or (name=='applications' and label=='Applications') or (name=='contribute' and label=='Get involved') else '')+(' class="github-link"' if label.startswith('GitHub') else '')+f'>{label}</a>' for label,u in nav)
-        vals=dict(root=root,title=escape(title),description=escape(description),canonical=ORIGIN+'/'+path,body_class='home' if name=='home' else 'interior',nav_links=nav_links,head_extra='<meta name="robots" content="noindex">' if name in ('404','example') or preview else '',**links)
+        vals=dict(root=root,title=escape(title),description=escape(description),canonical=ORIGIN+'/'+path,body_class='home' if name=='home' else 'interior',nav_links=nav_links,head_extra='<meta name="robots" content="noindex">' if name in ('404','example') else '',**links)
         vals['header']=render((ROOT/'site/templates/header.html').read_text(),vals)
         vals['footer']=render((ROOT/'site/templates/footer.html').read_text(),vals)
-        vals.update(hero_picture=picture('hero',hero=True),worktable_picture=picture('worktable',cls='table-scene')+'<div class="panorama-screens" aria-hidden="true">'+''.join(screen(a) for a in ('code','image','cloud'))+'</div>',shared_picture=picture('shared'),chapter_picture=picture('chapter'),featured_apps=''.join(featured(a,preview) for a in apps if a.get('featured')),layers=layers(),doc_cards=doc_cards(),application_rows=app_rows(apps))
+        vals.update(hero_picture=picture('hero',hero=True),worktable_picture=picture('worktable',cls='table-scene')+screens(),shared_picture=picture('shared'),chapter_picture=picture('chapter'),featured_apps=''.join(featured(a,text_brands) for a in apps if a.get('featured')),layers=layers(),doc_cards=doc_cards(),application_rows=app_rows(apps))
         vals['content']=render((ROOT/f'site/pages/{name}.html').read_text(),vals)
         text=render((ROOT/'site/templates/layout.html').read_text(),vals)
         text=text.replace('↗', '<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg>')
@@ -107,10 +138,10 @@ def build(output, preview=False):
     if output!=ROOT:
         shutil.copytree(ROOT/'assets',output/'assets',dirs_exist_ok=True)
         for name in ['LICENSE','.nojekyll','favicon.ico','robots.txt']: shutil.copy2(ROOT/name,output/name)
-    print(f'Generated {len(PAGES)} pages; shared design v{VERSION}; brands={"review" if preview else "publication fallbacks"}')
+    print(f'Generated {len(PAGES)} pages; shared design v{VERSION}; brands={"text only" if text_brands else "original upstream marks"}')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,default=ROOT)
-    parser.add_argument('--preview-brands',action='store_true',help='Review original supplied marks; does not grant public logo permission.')
-    args=parser.parse_args();build(args.output.resolve(),args.preview_brands)
+    parser.add_argument('--text-brands',action='store_true',help='Use textual upstream attribution when required by the publication context.')
+    args=parser.parse_args();build(args.output.resolve(),args.text_brands)

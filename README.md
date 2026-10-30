@@ -17,7 +17,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Open `http://127.0.0.1:8000/`. The site works without JavaScript. The check is
 network-free and verifies pages, local links/fragments, metadata, semantic
-structure, asset paths, the app registry, publication fallbacks and byte budgets.
+structure, asset paths, the app registry, upstream attribution and byte budgets.
 Use `--external-list` for a link inventory.
 
 ## Maintain
@@ -25,7 +25,7 @@ Use `--external-list` for a link inventory.
 - `site/pages/`: semantic page bodies, including docs, applications and policies.
 - `site/templates/`: shared head, navigation, footer and active states.
 - `site/data/applications.json`: one app registry; unpublished sites link to GitHub.
-- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.0 and optional menu enhancement.
+- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.1 and optional menu enhancement.
 - `assets/library/`: responsive library imagery and mobile crops, generated from the approved references.
 - `scripts/build_site.py`: deterministic standard-library generation.
 - `scripts/export_theme.py`: versioned, self-contained theme export for future project repositories.
@@ -71,6 +71,7 @@ for static builds. Start the local server, then run:
 
 ```sh
 CHROME_PATH=/usr/bin/chromium npm run qa
+CHROME_PATH=/usr/bin/chromium npm run qa:scenes
 ```
 
 Omit `CHROME_PATH` to use Playwright's separately installed Chromium. The checker

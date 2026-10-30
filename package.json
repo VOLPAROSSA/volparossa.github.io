@@ -1,12 +1,13 @@
 {
   "name": "volparossa-public-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Optional browser QA tools; building and serving the site require only Python 3.",
   "scripts": {
     "build": "python3 scripts/build_site.py",
     "check": "python3 scripts/check_site.py",
-    "qa": "node scripts/browser_check.mjs"
+    "qa": "node scripts/browser_check.mjs",
+    "qa:scenes": "node scripts/scene_check.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

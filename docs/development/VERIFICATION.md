@@ -1,9 +1,51 @@
 # Website verification — 30 October 2026
 
+## Desktop rendering correction (design 1.0.1)
+
+The owner's 27-inch Firefox report exposed desktop hero cropping and independent
+screen offsets. The hero now keeps its complete 3:2 image. A shared SVG coordinate
+plane projects the complete interface images onto the measured device apertures
+on desktop and the matching mobile crops. Application panels follow the stations
+at wide sizes. The original Immich and OpenCloud marks are now present, with
+attribution; the owner explicitly requested them in this correction. The asset
+register records that choice separately from third-party permissions.
+
+- `npm run qa:scenes`: 14 homepage checks in Chromium 154 and Firefox 153 at
+  320, 390, 768, 1440, 1920, 2560 and 3840 CSS pixels, DPR 1. Full hero ratio,
+  all three loaded interface images, no display cropping, all three visible
+  marks and no horizontal overflow. Documentation and applications checked at
+  2560; 200% desktop text resize and mobile navigation without JavaScript pass.
+- `npm run qa`: the existing 40 route/width checks pass; all 16 axe scans report
+  zero violations. Keyboard, mobile menu, 200% mobile text and reduced motion pass.
+- Skip-link focus was rechecked in both browsers after replacing off-screen
+  positioning with clipping; it is visible on focus and reaches main correctly.
+- Actual full-page and worktable renders reviewed in both browsers, including
+  2560 desktop and 390 mobile. The large Firefox scene was also inspected at
+  3840. Artifacts: [current browser review](../review/README.md).
+- Lighthouse 13.6, local Python server, default mobile simulation / desktop
+  preset: performance **98 / 99**, accessibility **100 / 100**, best practices
+  **100 / 100**, SEO **100 / 100**. Mobile transfer **246 KiB**. These are lab
+  measurements, not field Core Web Vitals. [Recorded metrics](../review/scene-performance.json).
+- Build, static checks, original-logo hashes, text-only attribution variant,
+  shared theme export (v1.0.1) and `git diff --check` pass. The new official
+  screenshot downloads match their Git blob IDs in the asset register.
+- WebKit remains unavailable because of the host libraries listed below; no
+  Safari or physical 27-inch monitor result is claimed. Viewport dimensions,
+  rather than screen diagonal, determine these responsive layouts.
+
+The lazy-image check scrolls each image into view and waits for decoding before
+checking it. An initial fast synthetic scroll left one Firefox 3840 image pending;
+the per-image check and a slower real render both load it correctly.
+
+## Original build verification
+
+The following records the initial build. The correction results above supersede
+its previous text-only brand decision and screenshot crops.
+
 ## Source and configuration
 
 - `python3 scripts/build_site.py` generates all nine HTML pages using Python's standard library.
-- `python3 scripts/check_site.py` passes: English language, one h1, heading order, balanced HTML, unique IDs, local links and fragments, dimensions/alt attributes, metadata/canonicals, local resources, sitemap, 11 app destinations, brand fallbacks, root and nested asset paths, unchanged CNAME and license.
+- `python3 scripts/check_site.py` passes: English language, one h1, heading order, balanced HTML, unique IDs, local links and fragments, dimensions/alt attributes, metadata/canonicals, local resources, sitemap, 11 app destinations, upstream attribution, root and nested asset paths, unchanged CNAME and license.
 - `git diff --check` passes. The original V-and-fox source and retained copy have identical pixels and alpha.
 - Existing Pages remains `legacy`, source `main:/`, domain `volparossa.org`, HTTPS enforced. No DNS, protection, deployment-source or other repository code change.
 - External HEAD checks: 52 of 53 destinations returned 200 before publication. The new asset-register link on `main` returned the expected pre-merge 404; it must be confirmed after publication. Original Code/Image/Cloud project-site routes returned 404, so CTAs correctly select existing repositories.
@@ -35,9 +77,9 @@ hero framing, missing Unicode glyphs, mobile text reflow and final title placeme
 Generated a dedicated portrait hero to retain the central arch and fox.
 
 The shared reading table and closing fox balcony are separate sharp images.
-The public Image/Cloud labels deliberately use the permitted text fallback.
-The Image screen uses a cropped real scenic-library example rather than the
-mockup's invented software. On mobile the stations stack in DOM order, each
+The initial Image/Cloud labels used a text fallback, superseded by the
+owner-requested original marks in design 1.0.1. The Image screen now uses the
+complete official tag-view example, rather than the previous thin crop. On mobile the stations stack in DOM order, each
 with its own image crop, description, status and working destination.
 Full-page captures first load all images and expand native off-screen rendering;
 they do not substitute concept art for browser output. See [review images](../review/README.md).

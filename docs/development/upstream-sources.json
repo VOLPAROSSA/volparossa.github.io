@@ -7,15 +7,15 @@
   },
   {
     "name": "image-screen",
-    "source": "https://github.com/immich-app/immich/blob/main/docs/static/img/screenshot-light.webp",
-    "git_blob": "0d88697f478a71f15b784105a5a8cd536c9c1537",
-    "sha256": "a2a36dee23ddb2d4d4b2830848d5e847ae717623137b00746da1e165ec06399f"
+    "source": "https://github.com/immich-app/immich/blob/main/docs/docs/features/img/tag-view.webp",
+    "git_blob": "25f842b879e989a1a0c5868d1815c3f709071ac3",
+    "sha256": "ab83252d2a37d35db66f6fa812cae5f41da4d3db6f53f67706af38be6f33e3da"
   },
   {
     "name": "cloud-screen",
-    "source": "https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/create-rename-move/new-button.png",
-    "git_blob": "00049b2b28c00f75d9916525723f42ae83149fdc",
-    "sha256": "1309ed5705040b972060121e1d26878dec20152460819cc1bdd502ee415e03f9"
+    "source": "https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/favorites/favorites-personal.png",
+    "git_blob": "711096d42d694bc146741a48b3bf228cdf92ffba",
+    "sha256": "1d11ef2b6942b880090b1366cd83853bdb6a66b448e96ae81dde1c5e08783de7"
   },
   {
     "name": "opencode-mark",

@@ -162,7 +162,8 @@ def main():
     home = (ROOT / "index.html").read_text()
     for text in ["Knowledge grows", "Familiar tools. New possibilities.", "Built on open source. Extended by VOLPAROSSA.", "Integration in development"]:
         assert text in home, f"Required content missing: {text}"
-    assert 'src="assets/upstream/immich.svg"' not in home and 'src="assets/upstream/opencloud.svg"' not in home, "Public brand fallback changed without review"
+    for mark in ('opencode', 'immich', 'opencloud'):
+        assert f'src="assets/upstream/{mark}.svg"' in home, f"Missing upstream mark: {mark}"
     assert not re.search(r'(?:href|src)="/assets/', (ROOT / "examples/volparossa-application/index.html").read_text()), "Root-absolute example asset"
     compressed = sum(len(gzip.compress((ROOT / "assets" / n).read_bytes())) for n in ("site.css", "site.js"))
     assert compressed < 150000, f"CSS/JS budget exceeded: {compressed}"

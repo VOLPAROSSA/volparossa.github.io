@@ -37,8 +37,8 @@ labelled as upstream examples, never evidence of a completed integration.
 | Local file | Official source | Treatment and boundaries |
 | --- | --- | --- |
 | `assets/upstream/code-screen.webp` | [OpenCode terminal screenshot](https://github.com/anomalyco/opencode/blob/dev/packages/web/src/assets/lander/screenshot.png) | Cropped window padding, resized. Actual upstream TUI and its public sample task, not the mockup's invented editor. MIT notice retained as `OPENCODE-LICENSE.txt`. |
-| `assets/upstream/image-screen.webp` | [Immich public sample library](https://github.com/immich-app/immich/blob/main/docs/static/img/screenshot-light.webp) | Scenic lower library row only; excludes people/personal-photo examples, header/logo, avatar and account/storage information. No user photo library. AGPL notice retained as `IMMICH-LICENSE.txt`. |
-| `assets/upstream/cloud-screen.webp` | [OpenCloud Files documentation](https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/create-rename-move/new-button.png) | Public sample folder/file grid; excludes brand header and avatar. Source: OpenCloud GmbH. AGPL documentation notice retained as `OPENCLOUD-DOCS-LICENSE.txt`. |
+| `assets/upstream/image-screen.webp` | [Immich public sample library](https://github.com/immich-app/immich/blob/main/docs/docs/features/img/tag-view.webp) | Complete official tag-view screenshot; sample architecture and scenery, no private user library. Resized to 900×603 without cropping. AGPL notice retained as `IMMICH-LICENSE.txt`. |
+| `assets/upstream/cloud-screen.webp` | [OpenCloud Files documentation](https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/favorites/favorites-personal.png) | Public sample favourites grid; crop (8,61)–(1272,711) omits the profile header and outer frame, retaining all three files, navigation and status; resized to 1000×514. Source: OpenCloud GmbH. AGPL documentation notice retained as `OPENCLOUD-DOCS-LICENSE.txt`. |
 
 Screenshot excerpting and technical resampling do not create new software
 functionality. The screens are decorative demonstrations of the tool category;
@@ -50,17 +50,18 @@ Upstream component licenses remain separate from the website's GPL license.
 | Mark | Source and review | Public build |
 | --- | --- | --- |
 | OpenCode | [Brand page](https://opencode.ai/brand) and official `packages/console/app/src/asset/brand/opencode-logo-light.svg`. The page's current source and English strings expose downloadable assets; no partnership is implied. Direct brand-page HTTP access returned 403 here, so its official GitHub source was inspected. | Original SVG, unmodified aspect/colour, attribution. |
-| Immich | Original `design/immich-logo.svg`. [Current FAQ](https://docs.immich.app/FAQ/) was checked through official `docs/docs/FAQ.mdx` after direct HTTP returned 403. It discusses commercial integration notification, prohibits reseller marketing marks and rejects implied affiliation. It is not blanket permission for this website's promotional logo use. | Text “Built on Immich”. Supplied original SVG appears only in the isolated `--preview-brands` review build. |
-| OpenCloud | Original supplied SVG with protective space, from [press assets](https://opencloud.eu/en/about-us/press). [Terms](https://opencloud.eu/en/press/terms-of-use) fetched successfully: source attribution; no logo modification; prior written consent for commercial use. | Text “Built on OpenCloud”. Original unchanged SVG appears only in the isolated review build. Interface excerpt attribution is retained. |
+| Immich | Original `design/immich-logo.svg`. [Current FAQ](https://docs.immich.app/FAQ/) was checked through official `docs/docs/FAQ.mdx` after direct HTTP returned 403. It discusses commercial integration notification, prohibits reseller marketing marks and rejects implied affiliation. It is not blanket permission for this website's promotional logo use. | Original supplied SVG displayed with “Built on Immich”, per the owner’s follow-up request; no recolouring or tracing. |
+| OpenCloud | Original supplied SVG with protective space, from [press assets](https://opencloud.eu/en/about-us/press). [Terms](https://opencloud.eu/en/press/terms-of-use) fetched successfully: source attribution; no logo modification; prior written consent for commercial use. | Original supplied SVG displayed with “Built on OpenCloud”, per the owner’s follow-up request; protective space and attribution retained. |
 
-**Concrete follow-up before enabling standalone Immich/OpenCloud marketing
-logos:** confirm the intended public-use context with the respective rights
-holders and record any required notification/permission and its scope. No
-permission, partnership or endorsement has been inferred from code licenses.
-No external party has been approached. The text fallbacks permit this website
-to be published without turning that follow-up into a build blocker. The review
-flag does not grant rights. Any later commercial use of OpenCloud visual material
-requires the prior written consent described by its terms.
+The owner explicitly requested the missing Immich and OpenCloud logos in the
+follow-up desktop correction. That request supersedes the attachment's default
+text-only publication choice. It is an instruction to display the original marks,
+not evidence of third-party permission. No permission, partnership or endorsement
+is claimed, and no external party has been contacted. Keep the cited conditions
+visible in this register: any commercial use of OpenCloud visual material still
+requires the prior written consent described in its terms, and Immich's commercial
+integration/reseller conditions still apply. `--text-brands` provides a clean
+fallback for a publication context that requires text-only attribution.
 
 ## Fonts
 
