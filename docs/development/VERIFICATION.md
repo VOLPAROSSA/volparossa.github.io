@@ -2,9 +2,9 @@
 
 ## Core navigation and documentation (design 1.0.3)
 
-The shared header/footer now includes Core. Its explicit publication flag remains
-false until the independent Core project site has been deployed and checked; the
-interim link opens its existing GitHub repository. `/docs/#core` and `/docs/#dps`
+The shared header/footer now includes Core. Its publication flag was enabled after
+the independent Core project site was deployed and checked at
+`https://volparossa.org/volparossa/`. `/docs/#core` and `/docs/#dps`
 are real reading-path anchors with maintained source links marked “View on GitHub”.
 The theme export includes the shared navigation data/renderer and records an exact
 clean source commit alongside its SHA-256 manifest. The production homepage
@@ -29,6 +29,13 @@ scenery, source, CNAME and application publication flags are unchanged.
   this scoped navigation update has no new Lighthouse run. Earlier scores remain
   dated lab measurements, not field data.
 - Existing WebKit host-library limitation remains; no Safari result is claimed.
+- Publication prerequisite verified: Core commit `10836b7416ce7e09cec64c80353268997032336b`,
+  [successful Pages run](https://github.com/VOLPAROSSA/volparossa/actions/runs/41099307805).
+  Live HTML returns HTTP 200 and exactly matches the tested artifact. Chromium at
+  390/1440px and Firefox at 390/2560px show loaded images, correct canonical/active
+  Core navigation, working menu/disclosures and no overflow or browser errors.
+  [Production results](../review/core-publication-results.json) record these checks.
+  All nine generated pages and static checks pass again with the active Core URL.
 
 ## Visual finishing (design 1.0.2)
 

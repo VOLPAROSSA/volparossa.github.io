@@ -74,10 +74,10 @@ Its logo and general Documentation/Get involved links return to the homepage.
 Social-image metadata is supplied by each site's builder through the shared
 layout, so a Core page can use its harbour image without forking the head.
 
-`site/data/projects.json` selects the Core destination. It remains the real
-repository until `https://volparossa.org/volparossa/` has been successfully
-published and verified. Enabling the flag changes navigation without inventing
-a local copy of the project page. The Core repository owns its own Pages output;
+`site/data/projects.json` selects the Core destination. The flag is now enabled
+after `https://volparossa.org/volparossa/` was successfully published and verified.
+An unpublished project uses its real repository destination. The Core repository
+owns its own Pages output; no local copy of its page is needed here.
 the homepage's CNAME, publication source and root content remain unchanged.
 
 `/docs/#core` and `/docs/#dps` are real central portal anchors. They link to the
