@@ -25,6 +25,10 @@ No stock image substitutes the library. No private files or visitor data are use
 
 ## Interface images
 
+Original upstream SVGs and license notices retain their original bytes and line
+endings. Narrow .gitattributes rules exempt only those vendor files from whitespace
+normalization/checking; authored HTML, CSS, scripts and documentation remain checked.
+
 The source bytes were fetched from official public repositories and matched to
 GitHub's blob hashes. Exact URLs, source SHA-256 and Git blob IDs are recorded
 in [upstream-sources.json](upstream-sources.json). Public display is explicitly
