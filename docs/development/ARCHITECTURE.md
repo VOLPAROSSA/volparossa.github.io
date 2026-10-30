@@ -78,7 +78,7 @@ layout, so a Core page can use its harbour image without forking the head.
 after `https://volparossa.org/volparossa/` was successfully published and verified.
 An unpublished project uses its real repository destination. The Core repository
 owns its own Pages output; no local copy of its page is needed here.
-the homepage's CNAME, publication source and root content remain unchanged.
+The homepage's CNAME, publication source and root content remain unchanged.
 
 `/docs/#core` and `/docs/#dps` are real central portal anchors. They link to the
 maintained architecture/privacy and DPS source documents with “View on GitHub”.
