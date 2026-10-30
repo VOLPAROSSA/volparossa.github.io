@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://volparossa.org/</loc><lastmod>2026-10-24</lastmod></url>
+<url><loc>https://volparossa.org/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://volparossa.org/docs/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://volparossa.org/applications/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://volparossa.org/contribute/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://volparossa.org/privacy/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://volparossa.org/accessibility/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://volparossa.org/credits/</loc><lastmod>2026-10-30</lastmod></url>
 </urlset>

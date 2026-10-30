@@ -1,0 +1,3 @@
+# Preserve exact upstream bytes, including their original line endings/notices.
+assets/upstream/*.svg -text -whitespace
+assets/upstream/*-LICENSE.txt -text -whitespace

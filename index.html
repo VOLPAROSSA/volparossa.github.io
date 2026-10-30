@@ -3,177 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#171713">
-  <title>VOLPAROSSA — A network built by all of us</title>
-  <meta name="description" content="Useful AI, private files and familiar apps: VOLPAROSSA is building shared infrastructure beyond one device. Explore tested milestones and help build the next step.">
+  <title>VOLPAROSSA — Knowledge grows when we share it.</title>
+  <meta name="description" content="Open applications. Shared infrastructure. Built together. Explore VOLPAROSSA, its developing applications and cooperative Core.">
+  <meta name="theme-color" content="#1c1516">
   <link rel="canonical" href="https://volparossa.org/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="VOLPAROSSA">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="VOLPAROSSA — A network built by all of us">
-  <meta property="og:description" content="A modest device should be a starting point, not a limit. Help build shared infrastructure for useful AI, private files and familiar open-source apps.">
+  <meta property="og:title" content="VOLPAROSSA — Knowledge grows when we share it.">
+  <meta property="og:description" content="Open applications. Shared infrastructure. Built together. Explore VOLPAROSSA, its developing applications and cooperative Core.">
   <meta property="og:url" content="https://volparossa.org/">
   <meta property="og:image" content="https://volparossa.org/assets/social.jpg">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="600">
-  <meta property="og:image:alt" content="VOLPAROSSA: people gathered around an illustrated wolf and compass map, lit by warm lanterns.">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A warm, monumental library opening onto a sunlit landscape, with a resting fox.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VOLPAROSSA — A network built by all of us">
-  <meta name="twitter:description" content="Everyday tools. Shared resources. Explore VOLPAROSSA's tested milestones and help build useful AI, private files and familiar open-source apps.">
   <meta name="twitter:image" content="https://volparossa.org/assets/social.jpg">
-  <meta name="twitter:image:alt" content="People gathered around a wolf and compass map under the VOLPAROSSA wordmark.">
-  <link rel="icon" href="/assets/compass.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/site.css">
+  <meta name="twitter:image:alt" content="The VOLPAROSSA Library of Tomorrow.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="/" aria-label="VOLPAROSSA home"><img src="/assets/compass.svg" width="30" height="30" alt="">VOLPAROSSA</a>
-    <nav aria-label="Main navigation">
-      <a href="#network">The network</a>
-      <a href="#applications">Applications</a>
-      <a href="#progress">Progress</a>
-      <a href="#join">Get involved <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
+  <header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="" aria-label="VOLPAROSSA home"><img src="assets/logo.png" width="64" height="64" alt=""><span>VOLPAROSSA</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#discover">Discover</a><a href="applications/">Applications</a><a href="docs/">Documentation</a><a href="contribute/">Get involved</a><a href="https://github.com/VOLPAROSSA" class="github-link">GitHub <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></nav>
+    <details class="mobile-nav">
+      <summary>Menu <span aria-hidden="true">☰</span></summary>
+      <nav aria-label="Mobile navigation"><a href="#discover">Discover</a><a href="applications/">Applications</a><a href="docs/">Documentation</a><a href="contribute/">Get involved</a><a href="https://github.com/VOLPAROSSA" class="github-link">GitHub <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></nav>
+    </details>
+  </div>
+</header>
 
-  <main id="main" tabindex="-1">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="small-star" aria-hidden="true">✦</span> Decentralized. Intelligent. Cooperative.</p>
-        <h1 id="hero-title">Do more.<br>Build it <em>together.</em></h1>
-        <p class="hero-intro">A modest device should be a starting point, not a limit.</p>
-        <p>Help with a coding task. A forecast for your day. Control over your files. VOLPAROSSA is building shared infrastructure for familiar open-source apps, so one device need not do everything alone.</p>
-        <div class="actions">
-          <a class="button primary" href="#purpose">See why it matters <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="#join">Help build the next step <span aria-hidden="true">↗</span></a>
-        </div>
-        <p class="preview"><span class="status-dot" aria-hidden="true"></span> Development preview · No supported end-user release</p>
-      </div>
-      <figure class="hero-art">
-        <img src="/assets/gathering-1600.jpg" srcset="/assets/gathering-800.jpg 800w, /assets/gathering-1600.jpg 1600w" sizes="(max-width: 760px) 100vw, 56vw" width="1600" height="800" fetchpriority="high" alt="People work together around a map illustrated with a wolf and compass, surrounded by books and golden lanterns.">
-        <figcaption><span>Many hands. One shared direction.</span><span aria-hidden="true">01 / A cooperative future</span></figcaption>
-      </figure>
-    </section>
-
-    <div class="foundation-strip"><div class="wrap"><span>One shared foundation</span><p>Network <span aria-hidden="true">/</span> Cache <span aria-hidden="true">/</span> Storage <span aria-hidden="true">/</span> Compute <span aria-hidden="true">/</span> Transaction</p><a href="#layers">Explore the five layers <span aria-hidden="true">↓</span></a></div></div>
-
-    <section class="weather-demo wrap" id="weather-demo" aria-labelledby="weather-demo-title">
-      <div class="demo-copy">
-        <p class="eyebrow">Weather / Demo 0</p>
-        <h2 id="weather-demo-title">The network in action</h2>
-        <p class="demo-intro">Real forecasts, delivered through cooperating peers.</p>
-        <p>Watch Overmorrow display real forecasts in an Android emulator, connected to an external VOLPAROSSA Core running in a disposable Debian 13 topology. The linked reports document peer delivery, cached refresh and background/resume alongside the recorded app views.</p>
-        <div class="demo-links">
-          <a href="https://github.com/VOLPAROSSA/volparossa/releases/download/weather-demo-0.1.0/transcript-final.txt">Read the transcript</a>
-          <a href="https://github.com/VOLPAROSSA/volparossa/releases/download/weather-demo-0.1.0/captions-final.vtt">Download captions (VTT)</a>
-          <a href="https://github.com/VOLPAROSSA/volparossa/releases/tag/weather-demo-0.1.0">Demo release &amp; downloads</a>
-          <a href="https://github.com/VOLPAROSSA/volparossa/blob/a1f268d64dd3b2625c827f2ed77840c65d0a405c/docs/demos/weather-demo-0/README.md">Evidence &amp; reproduction</a>
-        </div>
-        <p class="demo-boundary">Developer demonstration with disclosed cuts and a labelled conceptual graphic; no speed claim. This does not establish a standalone Android node, physical-device or iOS support, or a production consumer release.</p>
-        <p class="demo-credits">Forecasts: ECMWF IFS and NOAA GEFS-Aerosols. App: Overmorrow. <a href="https://github.com/VOLPAROSSA/volparossa/blob/a1f268d64dd3b2625c827f2ed77840c65d0a405c/docs/demos/weather-demo-0/NOTICES.md">Credits &amp; notices</a>.</p>
-      </div>
-      <figure class="demo-preview">
-        <a class="demo-watch" href="https://github.com/VOLPAROSSA/volparossa/releases/download/weather-demo-0.1.0/weather-demo-0-final.mp4">
-          <img src="/assets/thumbnail-final-web.webp" width="960" height="540" loading="lazy" decoding="async" alt="Weather demo: an Overmorrow forecast table beside a conceptual Weather → External Core → Peers diagram.">
-          <span>Watch the demo <span aria-hidden="true">↗</span><small>61 seconds · Silent video · MP4</small></span>
-        </a>
-        <figcaption>Recorded Android app with external Core. Forecasts reflect the original capture, not today's weather.</figcaption>
-      </figure>
-    </section>
-
-    <section class="paper section" id="purpose" aria-labelledby="purpose-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">01 / The purpose</p><h2 id="purpose-title">More opportunity.<br>Less dependence.</h2><p class="section-intro">The goal is everyday software that draws on shared capacity while keeping people in control. One common foundation lets improvements reach several applications.</p></div>
-        <div class="purpose-grid">
-          <article><span class="index" aria-hidden="true">I.</span><h3>Reach beyond your device</h3><p>Ask for help with code, research or a document without making your own computer carry the whole task. We are building shared models and agents for applications to use together; dependable shared AI and protected private tasks remain unfinished.</p></article>
-          <article><span class="index" aria-hidden="true">II.</span><h3>Keep a say in where data lives</h3><p>Keep photos, files and messages under your control, with software you can inspect. Our goal is private storage without running your own always-on server. Complete Cloud/Image services and their joined maintenance are still being developed.</p></article>
-          <article><span class="index" aria-hidden="true">III.</span><h3>Build on tools people know</h3><p>Firefox, Signal, Thunderbird and other open-source foundations give us useful starting points. A shared forecast can serve two weather clients; a storage repair should help both files and photos. One contribution can improve more than one application.</p></article>
-        </div>
-        <p class="aside-note">These are development goals, not coverage, privacy or savings guarantees. Devices need power and reachable links; internet access needs someone's real uplink. Sharing adds transfer and storage costs too. Creators' rights and access permissions still apply.</p>
-      </div>
-    </section>
-
-    <section class="paper section layers-section" id="network" aria-labelledby="network-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">02 / The shared foundation</p><h2 id="network-title">Beyond a VPN.<br>Built to work together.</h2><p class="section-intro">A DICN—a Decentralized Intelligent Cooperative Network—puts five services in one background core. Applications share the foundation, so each need not build its own network, storage and AI infrastructure.</p></div>
-        <div class="layers" id="layers">
-          <article><span class="layer-number" aria-hidden="true">01</span><h3>Network</h3><p>Protected connections over useful local and internet paths. Participants contribute according to available capabilities.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/architecture/ARCHITECTURE.md">Network architecture <span aria-hidden="true">↗</span></a></article>
-          <article><span class="layer-number" aria-hidden="true">02</span><h3>Cache</h3><p>Verify and reuse eligible public content instead of fetching the same bytes again. Sharing respects authenticity and access rights.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/README.md">Cache documentation <span aria-hidden="true">↗</span></a></article>
-          <article><span class="layer-number" aria-hidden="true">03</span><h3>Storage</h3><p>Retain encrypted private data across peers, with recovery copies and a common redundancy policy. Fair capacity accounting remains in development.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/PRIVATE_STORAGE.md">Private storage <span aria-hidden="true">↗</span></a></article>
-          <article><span class="layer-number" aria-hidden="true">04</span><h3>Compute</h3><p>Agents share suitable tasks, models and learning. Useful shared intelligence is the goal; confidential private-peer execution remains unfinished.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/DECENTRALIZED_AGENTS.md">Cooperative agents <span aria-hidden="true">↗</span></a></article>
-          <article><span class="layer-number" aria-hidden="true">05</span><h3>Transaction</h3><p>Authorize and record transfers with explicit settlement states. Current trials use fictitious TEST units, not real financial services.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/TRANSACTION_LAYER.md">Transaction research <span aria-hidden="true">↗</span></a></article>
-        </div>
-        <div class="shared-note"><span class="small-star" aria-hidden="true">✦</span><p>Public cache, private storage and message custody have different permissions and lifecycles. Private content does not automatically become public content or training data. One compatible core should keep accepted work running when an application closes.</p></div>
-      </div>
-    </section>
-
-    <section class="route-section section" aria-labelledby="route-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">03 / One route, one relay</p><h2 id="route-title">Many paths.<br>A clear privacy boundary.</h2><p class="section-intro">Each normal internet route is <strong>client → exactly one relay → exit → destination.</strong> Parallel paths use different relays between the same client and the same selected exit.</p></div>
-        <figure class="route-figure">
-          <div class="route-diagram" aria-hidden="true">
-            <div class="route-node client"><span class="node-symbol">◇</span><strong>Your node</strong><span>Client</span></div>
-            <div class="relay-nodes"><div class="route-node"><span>Path A</span><strong>Relay A</strong></div><div class="route-node"><span>Path B</span><strong>Relay B</strong></div><div class="route-node"><span>Path C</span><strong>Relay C</strong></div></div>
-            <div class="route-node exit"><span class="node-symbol">✦</span><strong>Selected exit</strong><span>Independent uplink</span></div>
-            <div class="route-node destination"><span class="node-symbol">◎</span><strong>Destination</strong><span>Policy-authorized</span></div>
-          </div>
-          <figcaption>Architecture: three example parallel paths, each through its own relay, share one client and one exit. No normal client-to-exit dataplane connection. End-to-end payload encryption spans both WireGuard links on every path.</figcaption>
-        </figure>
-        <div class="privacy-grid"><p><strong>The relay</strong> knows the client and selected exit, not the internet destination.</p><p><strong>The exit</strong> knows the destination and incoming relay, not the client's public address.</p><p><strong>The destination</strong> sees the exit address. A global observer may still correlate low-latency traffic.</p></div>
-        <div class="route-bottom"><p>The v1 transport design requires genuine MPTCP for TCP, protected single-path QUIC/MASQUE for general UDP, and genuine Multipath QUIC for browser HTTP/3. Ordinary TCP or single-path QUIC does not satisfy a multipath requirement.</p><a class="text-link" href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/privacy/THREAT_MODEL.md">Read the threat model <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="paper section" id="applications" aria-labelledby="applications-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">04 / Familiar tools, shared possibilities</p><h2 id="applications-title">One core.<br>Ten directions to explore.</h2><p class="section-intro">Independent integrations built on the work of open-source communities. Each is at its own stage of development; these are not finished replacement products.</p></div>
-        <div class="app-grid">
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Br</span><span class="app-foundation">Firefox</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-browser">Browser <span aria-hidden="true">↗</span></a></h3><p>Privacy-respecting browsing, shared content and cooperative AI.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Ch</span><span class="app-foundation">Signal</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-chat">Chat <span aria-hidden="true">↗</span></a></h3><p>Decentralized delivery, encrypted calls and private backups.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Ma</span><span class="app-foundation">Thunderbird + Stalwart</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-mail">Mail <span aria-hidden="true">↗</span></a></h3><p>Existing addresses, shared intelligence and self-hosted mail.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Co</span><span class="app-foundation">OpenCode</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-code">Code <span aria-hidden="true">↗</span></a></h3><p>Coding agents using shared models and coordinated work.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Im</span><span class="app-foundation">Immich</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-image">Image <span aria-hidden="true">↗</span></a></h3><p>Private photo and video libraries with encrypted recovery.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Mp</span><span class="app-foundation">Organic Maps</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-map">Map <span aria-hidden="true">↗</span></a></h3><p>Offline navigation, map sharing and privacy-conscious traffic.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">We</span><span class="app-foundation">ECMWF · Drizz.li · Overmorrow</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-weather">Weather <span aria-hidden="true">↗</span></a></h3><p>Direct public model data and forecasts evaluated against observations.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Cl</span><span class="app-foundation">OpenCloud</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-cloud">Cloud <span aria-hidden="true">↗</span></a></h3><p>Private files and synchronization beyond one always-on server.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Ba</span><span class="app-foundation">Transaction-layer research</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-bank">Bank <span aria-hidden="true">↗</span></a></h3><p>Participant-owned portfolios and transfers. Fictitious-value work first.</p></article>
-          <article><div class="app-top"><span class="app-symbol" aria-hidden="true">Ci</span><span class="app-foundation">Participation research</span></div><h3><a href="https://github.com/VOLPAROSSA/volparossa-citizen">Citizen <span aria-hidden="true">↗</span></a></h3><p>Proposals and referenda alongside existing institutions. Simulation first.</p></article>
-        </div>
-        <p class="aside-note">These projects are not official products of their upstream communities. Upstream licenses and attribution remain in force. <a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/applications/APPLICATIONS.md">Explore each integration's scope and limitations <span aria-hidden="true">↗</span></a></p>
-      </div>
-    </section>
-
-    <section class="paper section progress-section" id="progress" aria-labelledby="progress-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">05 / Evidence before promises</p><h2 id="progress-title">Working milestones.<br>Work still ahead.</h2><p class="section-intro">A development snapshot, <time datetime="2026-10-20">20 October 2026</time>. Results belong to their original revisions and conditions. A passing trial is evidence for that scope, not certification of the whole network.</p></div>
-        <div class="evidence-grid">
-          <article><p class="evidence-label">Demonstrated / scoped transport</p><h3>Real multipath traffic</h3><p>A historical A01–A15 run proved genuine MPTCP and MPQUIC data paths, policy and privacy checks, failover and cleanup in its disposable topology.</p><a href="https://github.com/VOLPAROSSA/volparossa/actions/runs/34047766913">Original transport trial <span aria-hidden="true">↗</span></a><p class="boundary">That exact-build checkpoint does not certify every later change, device or network.</p></article>
-          <article><p class="evidence-label">Demonstrated / application workflow</p><h3>Weather through peers</h3><p>The installed Overmorrow Android app retrieved real forecasts through the core in an emulator, refreshed and resumed from the background.</p><a href="https://github.com/VOLPAROSSA/volparossa/actions/runs/38717988016">Original Android trial <span aria-hidden="true">↗</span></a><p class="boundary">Real-product expiry, physical phones, iOS and the complete Weather service remain open.</p></article>
-          <article><p class="evidence-label">Demonstrated / local model task</p><h3>A coding loop that runs</h3><p>An OpenCode model-driven trial read a fixture, made an approved edit, ran a test and passed an independent check in about 37 minutes.</p><a href="https://github.com/VOLPAROSSA/volparossa-code/actions/runs/38824828727">Original coding trial <span aria-hidden="true">↗</span></a><p class="boundary">A bounded local CPU workflow; not general reliability or confidential peer execution. Its core pin is historical.</p></article>
-        </div>
-        <div class="open-work"><div><p class="eyebrow">Still open</p><h3>The next shared dependencies</h3></div><div><p><strong>Private-storage maintenance.</strong> The <a href="https://github.com/VOLPAROSSA/volparossa/actions/runs/39081968944">ordinary-expiry trial failed</a>. Full Image/Cloud publication, repair, repeated restore and deletion remain unaccepted; the earlier consumer failure and unconfirmed remote cleanup remain separate.</p><p><strong>Protected peer computation.</strong> The <a href="https://github.com/VOLPAROSSA/volparossa/actions/runs/39082065142">public-model guest trial failed before model execution</a>, with an export inventory pathname rejection. Source checks and public guests do not prove confidential hardware or private-peer execution.</p><p><strong>Research boundaries.</strong> Transaction trials use fictitious TEST units. Citizen uses fictional identities. Neither establishes real settlement, secure public elections or legal authority.</p></div></div>
-        <div class="status-link"><p>The maintained ledger holds exact revisions, original failures and the next milestones.</p><a class="button dark-button" href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/IMPLEMENTATION_STATUS.md#current-integration-and-active-work">Inspect the evidence ledger <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="principles-section section" aria-labelledby="principles-title">
-      <div class="wrap principles-layout"><div><p class="eyebrow">06 / A shared direction</p><h2 id="principles-title">Modern technology.<br>Universal wisdom.</h2><p>Our seven-virtue framework draws inspiration from ethical and philosophical traditions: humility, humanity, gentleness, diligence, generosity, moderation, and respect for consent and personal boundaries.</p><p>The intended shared immune system uses mutual review to examine work, challenge unreliable results and support correction across all layers. It is still in development. Decisions need defined authority, explanation and a way to contest them.</p><a class="text-link" href="https://github.com/VOLPAROSSA/volparossa#governed-by-7-virtues">Explore the principles <span aria-hidden="true">↗</span></a></div><blockquote><p>Share fairly.<br>Question carefully.<br>Keep people in control.</p><footer>A design commitment, open to scrutiny.</footer></blockquote></div>
-    </section>
-
-    <section class="paper section join-section" id="join" aria-labelledby="join-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">07 / Help build the next step</p><h2 id="join-title">There is room<br>for your contribution.</h2><p class="section-intro">Developers, designers, researchers, translators and curious future users: useful questions, careful criticism and clearer explanations belong here too.</p></div>
-        <div class="join-grid"><article><h3>Make one task easier</h3><p>Help a real person understand a guide, navigate an interface or finish a workflow. Choose a bounded contribution; documentation work does not require running the network.</p><a class="button dark-button" href="https://github.com/VOLPAROSSA/.github/blob/main/CONTRIBUTING.md">Start contributing <span aria-hidden="true">↗</span></a></article><article><h3>Test an assumption</h3><p>Researchers and curious users can inspect a recorded trial, question a privacy boundary or propose a fair comparison. Share a use case or a specific question without publishing private data.</p><a href="https://github.com/VOLPAROSSA/.github/blob/main/SUPPORT.md">Support and discussions <span aria-hidden="true">↗</span></a></article><article><h3>Help useful work travel</h3><p>Review an explanation, share a milestone with its limits or connect it with a relevant audience. Financial sponsorship remains pending. Network participation requires no payment, token or investment.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/SUPPORTING.md">Ways to support VOLPAROSSA <span aria-hidden="true">↗</span></a></article></div>
-        <div class="participation-note"><strong>Joining is voluntary. Contribution is reciprocal.</strong><p>Roles start off. Production consumers contribute nonzero relay capacity; nodes with usable independent internet also contribute exit service. Local-only nodes contribute their links without providing an exit. Your own device activity comes first. These responsibilities are distinct from sponsorship.</p></div>
-      </div>
-    </section>
-  </main>
-
+  <main id="main" tabindex="-1"><section class="hero" aria-labelledby="hero-heading">
+  <picture class="scene"><source media="(max-width: 800px)" type="image/avif" srcset="assets/library/hero-mobile.avif"><source media="(max-width: 800px)" type="image/webp" srcset="assets/library/hero-mobile.webp"><source media="(max-width: 800px)" srcset="assets/library/hero-mobile.jpg"><source type="image/avif" srcset="assets/library/hero-768.avif 768w, assets/library/hero-1536.avif 1536w" sizes="100vw"><source type="image/webp" srcset="assets/library/hero-768.webp 768w, assets/library/hero-1536.webp 1536w" sizes="100vw"><img src="assets/library/hero-1536.jpg" srcset="assets/library/hero-768.jpg 768w, assets/library/hero-1536.jpg 1536w" sizes="100vw" alt="" width="1536" height="1024" fetchpriority="high" loading="eager"></picture>
+  <div class="hero-copy wrap">
+    <p class="eyebrow">The library of tomorrow</p>
+    <h1 id="hero-heading">Knowledge grows<br>when we share it.</h1>
+    <p class="hero-subtitle">Open applications. Shared infrastructure. Built together.</p>
+    <div class="actions"><a class="button primary" href="#discover">Explore VOLPAROSSA <span aria-hidden="true">→</span></a><a class="button ghost" href="#applications">Discover the applications</a></div>
+    <span class="status light">In development</span>
+  </div>
+  <a class="hero-bottom" href="#applications"><span>A shared world of possibilities</span><span aria-hidden="true">↓</span></a>
+</section>
+<section class="applications-feature" id="applications" aria-labelledby="applications-heading">
+  <div class="section-heading wrap"><span class="ornament" aria-hidden="true">✦</span><p class="eyebrow">An open invitation</p><h2 id="applications-heading">Familiar tools. New possibilities.</h2><p>Built on open source. Extended by VOLPAROSSA.</p></div>
+  <div class="worktable">
+    <picture class="table-scene"><source type="image/webp" srcset="assets/library/worktable-768.webp 768w, assets/library/worktable-1536.webp 1536w" sizes="100vw"><img src="assets/library/worktable-1536.jpg" srcset="assets/library/worktable-768.jpg 768w, assets/library/worktable-1536.jpg 1536w" sizes="100vw" alt="" width="1536" height="710" loading="lazy" decoding="async"></picture><div class="panorama-screens" aria-hidden="true"><img class="screen screen-code " src="assets/upstream/code-screen.webp" width="800" height="557" alt="" loading="lazy" decoding="async"><img class="screen screen-image " src="assets/upstream/image-screen.webp" width="900" height="307" alt="" loading="lazy" decoding="async"><img class="screen screen-cloud " src="assets/upstream/cloud-screen.webp" width="1000" height="324" alt="" loading="lazy" decoding="async"></div>
+    <div class="app-grid wrap"><article class="app-card code" aria-labelledby="app-code">
+<div class="device-view"><picture class="mobile-device"><source type="image/webp" media="(max-width: 650px)" srcset="assets/library/code-mobile.webp"><img src="assets/library/code-mobile.jpg" width="600" height="560" alt="" loading="lazy" decoding="async"></picture><img class="screen screen-code " src="assets/upstream/code-screen.webp" width="800" height="557" alt="" loading="lazy" decoding="async"></div>
+<div class="app-content"><h3 id="app-code">Code</h3><p class="tagline">A new chapter for coding.</p><a class="upstream " href="https://opencode.ai/"><img src="assets/upstream/opencode.svg" width="30" height="42" alt="" class=""><span>Built on OpenCode</span></a><p class="app-description">Building on OpenCode to connect coding workflows with VOLPAROSSA&#x27;s cooperative compute foundation.</p><span class="status">Integration in development</span><a class="button primary" href="https://github.com/VOLPAROSSA/volparossa-code">Explore Code <span aria-hidden="true">→</span></a><p class="app-destination">Project repository · GitHub <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></p></div></article><article class="app-card image" aria-labelledby="app-image">
+<div class="device-view"><picture class="mobile-device"><source type="image/webp" media="(max-width: 650px)" srcset="assets/library/image-mobile.webp"><img src="assets/library/image-mobile.jpg" width="500" height="470" alt="" loading="lazy" decoding="async"></picture><img class="screen screen-image " src="assets/upstream/image-screen.webp" width="900" height="307" alt="" loading="lazy" decoding="async"></div>
+<div class="app-content"><h3 id="app-image">Image</h3><p class="tagline">Your memories, a shared foundation.</p><a class="upstream fallback" href="https://immich.app/"><span>Built on Immich</span></a><p class="app-description">Building on Immich to connect photo libraries with VOLPAROSSA&#x27;s shared storage foundation.</p><span class="status">Integration in development</span><a class="button primary" href="https://github.com/VOLPAROSSA/volparossa-image">Explore Image <span aria-hidden="true">→</span></a><p class="app-destination">Project repository · GitHub <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></p></div></article><article class="app-card cloud" aria-labelledby="app-cloud">
+<div class="device-view"><picture class="mobile-device"><source type="image/webp" media="(max-width: 650px)" srcset="assets/library/cloud-mobile.webp"><img src="assets/library/cloud-mobile.jpg" width="486" height="480" alt="" loading="lazy" decoding="async"></picture><img class="screen screen-cloud " src="assets/upstream/cloud-screen.webp" width="1000" height="324" alt="" loading="lazy" decoding="async"></div>
+<div class="app-content"><h3 id="app-cloud">Cloud</h3><p class="tagline">More room for what comes next.</p><a class="upstream fallback" href="https://opencloud.eu/"><span>Built on OpenCloud</span></a><p class="app-description">Building on OpenCloud to connect files and collaboration with VOLPAROSSA&#x27;s shared infrastructure.</p><span class="status">Integration in development</span><a class="button primary" href="https://github.com/VOLPAROSSA/volparossa-cloud">Explore Cloud <span aria-hidden="true">→</span></a><p class="app-destination">Project repository · GitHub <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></p></div></article></div>
+  </div>
+  <div class="applications-note wrap"><p>Upstream interface examples, not completed VOLPAROSSA integrations. <a href="credits/#interfaces">Image sources &amp; credits</a>.</p><a class="text-link" href="applications/">All applications <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="shared" id="discover" aria-labelledby="shared-heading">
+  <div class="shared-scene"><picture class="scene"><source type="image/webp" srcset="assets/library/shared-768.webp 768w, assets/library/shared-1536.webp 1536w" sizes="100vw"><img src="assets/library/shared-1536.jpg" srcset="assets/library/shared-768.jpg 768w, assets/library/shared-1536.jpg 1536w" sizes="100vw" alt="" width="1536" height="1024" loading="lazy" decoding="async"></picture>
+    <div class="shared-copy wrap"><p class="eyebrow">Many applications. One foundation.</p><h2 id="shared-heading">Built on<br>shared strength.</h2><p>Useful tools grow stronger when they can work together. VOLPAROSSA is building a shared, participant-operated foundation for connections, content and resources.</p><p>Multiple applications can reuse one compatible Core, with separate permissions and a common approach to cooperation.</p><a class="text-link" href="https://github.com/VOLPAROSSA/volparossa#governed-by-7-virtues">Our principles <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></span></a></div>
+  </div>
+  <div class="layers wrap" aria-label="The five Core layers"><article class="layer"><div class="layer-top"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="20" r="3"/><circle cx="22" cy="20" r="3"/><path d="m10 8-4 9m8-9 7 9M8 20h11"/></svg><h3>Network</h3></div><p>Protected connections between participants.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/network/ROUTING.md">Read the network guide <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article><article class="layer"><div class="layer-top"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 7h20v16H4zM4 7l4-4h12l4 4M9 12h10M9 17h7"/></svg><h3>Cache</h3></div><p>Reuse eligible, verified public content.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/CONTENT_NETWORK_PROPOSAL.md">Read the cache guide <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article><article class="layer"><div class="layer-top"><svg viewBox="0 0 28 28" aria-hidden="true"><ellipse cx="14" cy="5" rx="10" ry="4"/><path d="M4 5v16c0 5 20 5 20 0V5M4 13c0 5 20 5 20 0"/></svg><h3>Storage</h3></div><p>Encrypted private fragments and recovery copies.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/PRIVATE_STORAGE.md">Read the storage guide <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article><article class="layer"><div class="layer-top"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="m14 2 11 6v13l-11 6L3 21V8zM3 8l11 6 11-6M14 14v13"/></svg><h3>Compute</h3></div><p>Suitable tasks shared across participating devices.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/DECENTRALIZED_AGENTS.md">Read the compute guide <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article><article class="layer"><div class="layer-top"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M3 8h21l-5-5M25 20H4l5 5M24 8l-5 5M4 20l5-5"/></svg><h3>Transactions</h3></div><p>Transfers and settlement research with test value.</p><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/TRANSACTION_LAYER.md">Read the transactions guide <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article></div>
+  <p class="shared-boundary wrap">A foundation in development. Public caching, encrypted private storage and computation have different roles and trust boundaries. Transactions use fictitious test value.</p>
+</section>
+<section class="milestones wrap" aria-labelledby="milestones-heading">
+  <div class="milestone-intro"><div><p class="eyebrow">Steps that we can show</p><h2 id="milestones-heading">From vision to working milestones.</h2></div><a class="text-link" href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/IMPLEMENTATION_STATUS.md">Current implementation status <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></div>
+  <div class="milestone-grid">
+    <article><p class="milestone-date"><time datetime="2026-10-04">04 October 2026</time> · Cloud</p><h3>Files recovered through peers.</h3><p>A scoped trial uploaded a file through the original Files interface and recovered it after restart and the loss of one storage peer.</p><a href="https://github.com/VOLPAROSSA/volparossa/actions/runs/37218270756">Read the trial record <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article>
+    <article><p class="milestone-date"><time datetime="2026-10-15">15 October 2026</time> · Weather</p><h3>A forecast, shared and refreshed.</h3><p>Installed Overmorrow Android retrieved real forecast data through peers in an emulator, then refreshed from cache.</p><a href="https://github.com/VOLPAROSSA/volparossa/actions/runs/38717988016">Read the trial record <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article>
+    <article><p class="milestone-date"><time datetime="2026-10-16">16 October 2026</time> · Code</p><h3>Read. Edit. Test.</h3><p>OpenCode completed a bounded public-fixture task with a real local model, approved edits and tests, in about 37 minutes.</p><a href="https://github.com/VOLPAROSSA/volparossa-code/actions/runs/38824828727">Read the trial record <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></article>
+  </div>
+  <p class="milestone-limit">These results apply to their recorded revisions and test conditions. Complete applications, joined storage maintenance and confidential peer computation remain in development. There is no supported end-user release.</p>
+</section>
+<section class="invitation" aria-labelledby="chapter-heading">
+  <div class="invitation-copy"><span class="ornament" aria-hidden="true">✦</span><p class="eyebrow">There is a place for you here</p><h2 id="chapter-heading">The next chapter<br>is ours to build.</h2><p>Bring a question, a skill or a different perspective.<br>Help make shared technology useful to everyone.</p><a class="button primary" href="contribute/">Get involved <span aria-hidden="true">→</span></a><div class="invitation-links"><a href="docs/">Read the documentation</a><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/SUPPORTING.md">Support the project <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></div></div>
+  <picture class="scene"><source type="image/webp" srcset="assets/library/chapter-768.webp 768w, assets/library/chapter-1536.webp 1536w" sizes="100vw"><img src="assets/library/chapter-1536.jpg" srcset="assets/library/chapter-768.jpg 768w, assets/library/chapter-1536.jpg 1536w" sizes="100vw" alt="" width="1536" height="1024" loading="lazy" decoding="async"></picture>
+</section>
+</main>
   <footer class="site-footer">
-    <div class="wrap footer-top"><div><a class="brand" href="/" aria-label="VOLPAROSSA home"><img src="/assets/compass.svg" width="30" height="30" alt="">VOLPAROSSA</a><p>Shared resources. Shared intelligence.<br>A cooperative future, built in the open.</p></div><nav aria-label="Project resources"><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/README.md">Documentation</a><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/FAQ.md">Frequently asked questions</a><a href="https://github.com/VOLPAROSSA/.github/blob/main/CODE_OF_CONDUCT.md">Community guidelines</a><a href="https://github.com/VOLPAROSSA/.github/blob/main/ACCESSIBILITY.md">Accessibility</a><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/SECURITY.md">Report a vulnerability</a><a href="https://github.com/VOLPAROSSA/volparossa.github.io">Website source</a></nav></div>
-    <div class="wrap footer-bottom"><p>Development preview · Initial core target: Debian 13 amd64.<br>Do not rely on development builds for sensitive traffic or as your only backup.</p><p>No analytics, cookies or third-party embeds are added by this site.<br>Hosting requests are handled by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages</a>. Original work: <a href="/LICENSE">GPL-3.0-only</a>.</p></div>
-  </footer>
+  <div class="footer-main wrap">
+    <a class="brand" href="" aria-label="VOLPAROSSA home"><img src="assets/logo.png" width="56" height="56" alt=""><span>VOLPAROSSA</span></a>
+    <p>Open applications.<br>Shared infrastructure. Built together.</p>
+    <nav aria-label="Footer navigation"><a href="docs/">Documentation</a><a href="applications/">Applications</a><a href="contribute/">Get involved</a><a href="https://github.com/VOLPAROSSA">GitHub <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></nav>
+  </div>
+  <div class="footer-bottom wrap">
+    <p>Independent open-source project · In development</p>
+    <nav aria-label="Policies and credits"><a href="https://github.com/VOLPAROSSA/.github/blob/main/CODE_OF_CONDUCT.md">Code of conduct <svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a><a href="accessibility/">Accessibility</a><a href="privacy/">Privacy</a><a href="credits/">Credits</a></nav>
+  </div>
+</footer>
+
 </body>
 </html>
