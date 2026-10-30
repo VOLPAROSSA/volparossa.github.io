@@ -25,7 +25,7 @@ Use `--external-list` for a link inventory.
 - `site/pages/`: semantic page bodies, including docs, applications and policies.
 - `site/templates/`: shared head, navigation, footer and active states.
 - `site/data/applications.json`: one app registry; unpublished sites link to GitHub.
-- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.1 and optional menu enhancement.
+- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.2 and optional menu enhancement.
 - `assets/library/`: responsive library imagery and mobile crops, generated from the approved references.
 - `scripts/build_site.py`: deterministic standard-library generation.
 - `scripts/export_theme.py`: versioned, self-contained theme export for future project repositories.

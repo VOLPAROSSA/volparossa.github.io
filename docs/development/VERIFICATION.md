@@ -1,5 +1,33 @@
 # Website verification — 30 October 2026
 
+## Visual finishing (design 1.0.2)
+
+Implemented the owner's follow-up refinements: Immich increases from 36 to 46px,
+OpenCloud's complete SVG box from 60 to 76px high (clear space retained); status
+labels use a shared rounded badge on the home and applications pages; GitHub's
+Octicons mark precedes the navigation/footer link; and the closing scene extends
+across 64% of the desktop section with a soft paper-to-image transition. Mobile
+uses a vertical fade. The owner-requested gold VOLPAROSSA mark is part of the
+mug's image pixels, with no separate interactive overlay. The edited master and
+responsive crops preserve the existing screen coordinates.
+
+- Python build/static checks and `git diff --check` pass; original logo files,
+  upstream SVGs, licenses, CNAME and Pages source are preserved.
+- Chromium: existing 40 route/width checks and all 16 axe scans pass with zero
+  violations. Mobile menu, keyboard, reduced motion, no JS and 200% text pass.
+- Chromium and Firefox: all 14 scene cases pass at 320–3840 CSS pixels, including
+  complete hero framing, screen placement, all logos and desktop text resize.
+- Actual Firefox worktable, closing scene and applications renders reviewed at
+  390, 768, 1440 and 2560px. Header/footer renders show the GitHub marks. Additional
+  detail checks at 320, 390, 1024 and 2560px confirm badges, transitions and reflow.
+- Shared theme v1.0.2 exports and renders in both browsers, including the embedded
+  GitHub path and copied Octicons license. The decorative icons do not change
+  the text link's accessible name.
+- [Review images](../review/README.md) now show this version. The PNG worktable
+  master is a source asset only; visitor pages load the responsive WebP/JPEGs.
+- Lighthouse 13.6 mobile lab run: performance **97**, accessibility **100**, best practices **100**, SEO **100**. [Recorded metrics](../review/finishing-performance.json).
+- WebKit's host dependency limitation remains as documented below.
+
 ## Desktop rendering correction (design 1.0.1)
 
 The owner's 27-inch Firefox report exposed desktop hero cropping and independent

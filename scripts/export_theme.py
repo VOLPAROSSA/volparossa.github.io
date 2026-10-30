@@ -18,6 +18,7 @@ for name in ('site.css','site.js','tokens.css','logo.png','favicon.png','social.
     (output/'assets').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'assets'/name, output/'assets'/name)
 shutil.copytree(ROOT/'assets/fonts',output/'assets/fonts')
+shutil.copytree(ROOT/'assets/icons',output/'assets/icons')
 shutil.copytree(ROOT/'site/templates',output/'templates')
 shutil.copy2(ROOT/'LICENSE',output/'LICENSE')
 html=(ROOT/'examples/volparossa-application/index.html').read_text()

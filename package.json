@@ -1,6 +1,6 @@
 {
   "name": "volparossa-public-website",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "Optional browser QA tools; building and serving the site require only Python 3.",
   "scripts": {
