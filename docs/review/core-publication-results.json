@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-30T17:31:19.121Z",
+  "url": "https://volparossa.org/volparossa/",
+  "results": [
+    {
+      "browser": "chromium",
+      "width": 390,
+      "scrollWidth": 390,
+      "canonical": "https://volparossa.org/volparossa/",
+      "noindex": "",
+      "images": true,
+      "coreActive": true,
+      "dps": "Privacy-preserving positioning",
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "canonical": "https://volparossa.org/volparossa/",
+      "noindex": "",
+      "images": true,
+      "coreActive": true,
+      "dps": "Privacy-preserving positioning",
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 390,
+      "scrollWidth": 390,
+      "canonical": "https://volparossa.org/volparossa/",
+      "noindex": "",
+      "images": true,
+      "coreActive": true,
+      "dps": "Privacy-preserving positioning",
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 2560,
+      "scrollWidth": 2560,
+      "canonical": "https://volparossa.org/volparossa/",
+      "noindex": "",
+      "images": true,
+      "coreActive": true,
+      "dps": "Privacy-preserving positioning",
+      "errors": []
+    }
+  ]
+}

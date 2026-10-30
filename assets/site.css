@@ -49,3 +49,5 @@ h1,h2,h3{overflow-wrap:anywhere}.brand{max-width:100%;min-width:0}.brand span{mi
   .app-card{width:100%;max-width:440px;justify-self:center}
 }
 @media(max-width:650px){.panorama-screens{display:none}}
+/* Keep the shared six-link header usable when text alone is enlarged. */
+.nav-wrap,.desktop-nav{flex-wrap:wrap}.desktop-nav{max-width:100%}.page-hero .lead{overflow-wrap:anywhere}

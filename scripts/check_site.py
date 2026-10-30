@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Static semantic, path, metadata, asset and publication checks; no network."""
 import argparse
+import json
 from html.parser import HTMLParser
 from pathlib import Path
 import re
@@ -10,6 +11,8 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://volparossa.org"
+PROJECTS = json.loads((ROOT / "site/data/projects.json").read_text())
+PUBLISHED_PROJECT_URLS = {p["publication_url"] for p in PROJECTS.values() if p["published"]}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 
@@ -111,6 +114,9 @@ class Page(HTMLParser):
                 assert tag == "a", f"External subresource: {value}"
                 self.external.add(value)
                 continue
+            if tag == "a" and value in PUBLISHED_PROJECT_URLS:
+                self.external.add(value)  # A separately deployed repository owns this route.
+                continue
             local = ((ROOT / unquote(parsed.path).lstrip("/")) if parsed.netloc or parsed.path.startswith("/") else (self.path.parent / unquote(parsed.path))).resolve()
             if not parsed.path:
                 local = self.path
@@ -153,12 +159,21 @@ def main():
     expected = [ORIGIN + "/" + r for r in PAGES if r not in ("404.html", "examples/volparossa-application/")]
     assert [node.text for node in sitemap.findall(".//s:loc", namespace)] == expected, "Sitemap drift"
     assert f"Sitemap: {ORIGIN}/sitemap.xml" in (ROOT / "robots.txt").read_text()
-    import json, gzip
+    import gzip
     apps = json.loads((ROOT / "site/data/applications.json").read_text())
     external = set().union(*(p.external for p in pages))
     assert len(apps) == len({a["id"] for a in apps}), "Duplicate app"
     assert all(a["repository"] in external for a in apps), "Missing app destination"
     assert all(not a["published"] or a["publication_url"].startswith(ORIGIN + "/volparossa-") for a in apps), "Invalid project-site path"
+    core = PROJECTS['core']
+    assert core['publication_url'] == ORIGIN + '/volparossa/', 'Core project path drift'
+    assert isinstance(core['published'], bool), 'Core publication flag must be explicit'
+    core_target = core['publication_url'] if core['published'] else core['repository']
+    for page in pages:
+        assert ('a', 'href', core_target) in page.references, 'Missing configured Core navigation'
+    docs_page = next(p for p in pages if p.path == ROOT / 'docs/index.html')
+    assert {'core', 'dps'} <= docs_page.ids, 'Missing central Core/DPS documentation anchors'
+    assert 'https://github.com/VOLPAROSSA/volparossa/blob/main/docs/services/DPS.md' in docs_page.external, 'Missing DPS source'
     home = (ROOT / "index.html").read_text()
     for text in ["Knowledge grows", "Familiar tools. New possibilities.", "Built on open source. Extended by VOLPAROSSA.", "Integration in development"]:
         assert text in home, f"Required content missing: {text}"

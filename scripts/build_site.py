@@ -6,11 +6,12 @@ import json
 from pathlib import Path
 import re
 import shutil
+from shared_navigation import site_links, navigation_links
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://volparossa.org'
 CORE = 'https://github.com/VOLPAROSSA/volparossa'
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 GITHUB_ICON = (ROOT/'assets/icons/github.svg').read_text().strip().replace('<svg ', '<svg class="github-icon" aria-hidden="true" focusable="false" ', 1)
 
 def render(text, values):
@@ -84,15 +85,16 @@ def layers():
     return ''.join(f'<article class="layer"><div class="layer-top"><svg viewBox="0 0 28 28" aria-hidden="true">{ICONS[n]}</svg><h3>{n}</h3></div><p>{d}</p><a href="{CORE}/blob/main/docs/{p}">Read the {n.lower()} guide ↗</a></article>' for n,d,p in data)
 
 DOCS=[
-('Overview','The purpose, principles and present boundaries.', [('Project introduction',CORE),('Common questions',CORE+'/blob/main/docs/FAQ.md'),('The complete project goal',CORE+'/blob/main/docs/development/GOAL.md')]),
-('Getting started','A practical route for contributors and evaluators.', [('Contributor guide',CORE+'/blob/main/CONTRIBUTING.md'),('Build and package',CORE+'/blob/main/docs/development/OPERATIONS.md#build-and-package'),('Community overview',CORE+'/blob/main/docs/community/OVERVIEW.md')]),
-('Core architecture','Five layers, one compatible shared service.', [('Architecture',CORE+'/blob/main/docs/architecture/ARCHITECTURE.md'),('Application lifecycle',CORE+'/blob/main/docs/architecture/APPLICATION_LIFECYCLE.md'),('Privacy and trust boundaries',CORE+'/blob/main/docs/privacy/PRIVACY.md')]),
-('Applications','The tools, their upstream foundations and current scope.', [('Application guide',CORE+'/blob/main/docs/applications/APPLICATIONS.md'),('Code integration','https://github.com/VOLPAROSSA/volparossa-code/blob/main/docs/OPENCODE.md'),('Image and Cloud storage',CORE+'/blob/main/docs/services/PRIVATE_STORAGE.md')]),
-('Development','Build, test and understand the evidence.', [('Implementation status',CORE+'/blob/main/docs/IMPLEMENTATION_STATUS.md'),('Testing guide',CORE+'/blob/main/docs/development/TESTING.md'),('Operations guide',CORE+'/blob/main/docs/development/OPERATIONS.md')]),
-('Contributing','Useful first steps, respectful collaboration and support.', [('Contribution guide','https://github.com/VOLPAROSSA/.github/blob/main/CONTRIBUTING.md'),('Discussions',CORE+'/discussions'),('Support the project',CORE+'/blob/main/docs/community/SUPPORTING.md')])]
+('overview','Overview','The purpose, principles and present boundaries.', [('Project introduction',CORE),('Common questions',CORE+'/blob/main/docs/FAQ.md'),('The complete project goal',CORE+'/blob/main/docs/development/GOAL.md')]),
+('getting-started','Getting started','A practical route for contributors and evaluators.', [('Contributor guide',CORE+'/blob/main/CONTRIBUTING.md'),('Build and package',CORE+'/blob/main/docs/development/OPERATIONS.md#build-and-package'),('Community overview',CORE+'/blob/main/docs/community/OVERVIEW.md')]),
+('core','Core architecture','Five layers, one compatible shared service.', [('Architecture',CORE+'/blob/main/docs/architecture/ARCHITECTURE.md'),('Application lifecycle',CORE+'/blob/main/docs/architecture/APPLICATION_LIFECYCLE.md'),('Privacy and trust boundaries',CORE+'/blob/main/docs/privacy/PRIVACY.md')]),
+('dps','DPS — Decentralized Positioning System','Privacy-preserving positioning is a research and development goal, with explicit permissions and visible uncertainty.', [('DPS design and current boundaries',CORE+'/blob/main/docs/services/DPS.md'),('Privacy and separate permissions',CORE+'/blob/main/docs/privacy/PRIVACY.md'),('Current implementation evidence',CORE+'/blob/main/docs/IMPLEMENTATION_STATUS.md')]),
+('applications','Applications','The tools, their upstream foundations and current scope.', [('Application guide',CORE+'/blob/main/docs/applications/APPLICATIONS.md'),('Code integration','https://github.com/VOLPAROSSA/volparossa-code/blob/main/docs/OPENCODE.md'),('Image and Cloud storage',CORE+'/blob/main/docs/services/PRIVATE_STORAGE.md')]),
+('development','Development','Build, test and understand the evidence.', [('Implementation status',CORE+'/blob/main/docs/IMPLEMENTATION_STATUS.md'),('Testing guide',CORE+'/blob/main/docs/development/TESTING.md'),('Operations guide',CORE+'/blob/main/docs/development/OPERATIONS.md')]),
+('contributing','Contributing','Useful first steps, respectful collaboration and support.', [('Contribution guide','https://github.com/VOLPAROSSA/.github/blob/main/CONTRIBUTING.md'),('Discussions',CORE+'/discussions'),('Support the project',CORE+'/blob/main/docs/community/SUPPORTING.md')])]
 
 def doc_cards():
-    return ''.join(f'<section class="portal-card"><p class="number">0{i+1} / Reading path</p><h2>{n}</h2><p>{d}</p><ul>'+''.join(f'<li><a href="{u}">{t} · GitHub ↗</a></li>' for t,u in links)+'</ul></section>' for i,(n,d,links) in enumerate(DOCS))
+    return ''.join(f'<section class="portal-card" id="{ident}"><p class="number">0{i+1} / Reading path</p><h2>{n}</h2><p>{d}</p><ul>'+''.join(f'<li><a href="{u}">{t} · View on GitHub ↗</a></li>' for t,u in links)+'</ul></section>' for i,(ident,n,d,links) in enumerate(DOCS))
 
 def app_rows(apps):
     rows=[]
@@ -115,16 +117,17 @@ PAGES = {
 
 def build(output, text_brands=False):
     apps=json.loads((ROOT/'site/data/applications.json').read_text())
+    navigation=json.loads((ROOT/'site/data/navigation.json').read_text())
+    projects=json.loads((ROOT/'site/data/projects.json').read_text())
     for path,(name,title,description) in PAGES.items():
         depth=path.count('/')
         root='../'*depth
         special=name=='404'
         if special: root=ORIGIN+'/'  # Unknown nested 404 paths still load the real assets.
-        links={k:root+v for k,v in [('home',''),('docs','docs/'),('applications','applications/'),('contribute','contribute/'),('privacy','privacy/'),('accessibility','accessibility/'),('credits','credits/')]}
-        if name=='example': links={k:ORIGIN+'/'+v.removeprefix(root) for k,v in links.items()}
-        nav=[('Discover',links['home']+'#discover'),('Applications',links['applications']),('Documentation',links['docs']),('Get involved',links['contribute']),('GitHub ↗','https://github.com/VOLPAROSSA')]
-        nav_links=''.join(f'<a href="{u}"'+(' aria-current="page"' if (name=='docs' and label=='Documentation') or (name=='applications' and label=='Applications') or (name=='contribute' and label=='Get involved') else '')+(' class="github-link"' if label.startswith('GitHub') else '')+f'>{GITHUB_ICON if label.startswith("GitHub") else ""}{label}</a>' for label,u in nav)
-        vals=dict(root=root,title=escape(title),description=escape(description),canonical=ORIGIN+'/'+path,body_class='home' if name=='home' else 'interior',nav_links=nav_links,github_icon=GITHUB_ICON,head_extra='<meta name="robots" content="noindex">' if name in ('404','example') else '',**links)
+        links=site_links(navigation,projects,ORIGIN+'/' if name=='example' else root)
+        nav_links=navigation_links(navigation['main'],links,active=name,github_icon=GITHUB_ICON)
+        footer_links=navigation_links(navigation['footer'],links,active=name,github_icon=GITHUB_ICON,footer=True)
+        vals=dict(root=root,title=escape(title),description=escape(description),canonical=ORIGIN+'/'+path,body_class='home' if name=='home' else 'interior',nav_links=nav_links,footer_links=footer_links,github_icon=GITHUB_ICON,social_image=ORIGIN+'/assets/social.jpg',social_alt='A warm, monumental library opening onto a sunlit landscape, with a resting fox.',head_extra='<meta name="robots" content="noindex">' if name in ('404','example') else '',**links)
         vals['header']=render((ROOT/'site/templates/header.html').read_text(),vals)
         vals['footer']=render((ROOT/'site/templates/footer.html').read_text(),vals)
         vals.update(hero_picture=picture('hero',hero=True),worktable_picture=picture('worktable',cls='table-scene')+screens(),shared_picture=picture('shared'),chapter_picture=picture('chapter'),featured_apps=''.join(featured(a,text_brands) for a in apps if a.get('featured')),layers=layers(),doc_cards=doc_cards(),application_rows=app_rows(apps))

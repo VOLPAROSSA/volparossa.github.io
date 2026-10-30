@@ -25,7 +25,9 @@ Use `--external-list` for a link inventory.
 - `site/pages/`: semantic page bodies, including docs, applications and policies.
 - `site/templates/`: shared head, navigation, footer and active states.
 - `site/data/applications.json`: one app registry; unpublished sites link to GitHub.
-- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.2 and optional menu enhancement.
+- `site/data/projects.json`: the Core destination, activated only after verified publication.
+- `site/data/navigation.json`, `scripts/shared_navigation.py`: common header/footer links and active states.
+- `assets/tokens.css`, `assets/site.css`, `assets/site.js`: design v1.0.3 and optional menu enhancement.
 - `assets/library/`: responsive library imagery and mobile crops, generated from the approved references.
 - `scripts/build_site.py`: deterministic standard-library generation.
 - `scripts/export_theme.py`: versioned, self-contained theme export for future project repositories.
@@ -48,9 +50,9 @@ their exact-source scope; they do not establish a supported release, complete
 private-storage maintenance or confidential peer computation. The linked Core
 implementation ledger remains authoritative. No payment offer is created.
 
-Public builds use text acknowledgements for unresolved Immich/OpenCloud logo
-promotion. An isolated review build can show the original provided marks; see
-the architecture note. Upstream screen excerpts are attributed examples, not
+Public builds display the original upstream marks as requested by the owner.
+A text-only fallback remains available where required; see the architecture and
+asset/rights notes. Upstream screen excerpts are attributed examples, not
 VOLPAROSSA integration evidence. No private user data is used.
 
 The website is materially AI-assisted: code, copy and new environment artwork
