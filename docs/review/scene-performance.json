@@ -1,0 +1,38 @@
+{
+  "mobile": {
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-10-30T14:47:28.895Z",
+    "scores": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": "0.9\u00a0s",
+      "largest-contentful-paint": "2.4\u00a0s",
+      "total-blocking-time": "60\u00a0ms",
+      "cumulative-layout-shift": "0.001",
+      "total-byte-weight": "Total size was 246\u00a0KiB"
+    }
+  },
+  "desktop": {
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-10-30T14:51:00.776Z",
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": "0.3\u00a0s",
+      "largest-contentful-paint": "0.9\u00a0s",
+      "total-blocking-time": "10\u00a0ms",
+      "cumulative-layout-shift": "0.003",
+      "total-byte-weight": "Total size was 923\u00a0KiB"
+    }
+  }
+}

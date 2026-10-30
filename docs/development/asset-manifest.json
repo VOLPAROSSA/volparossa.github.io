@@ -132,16 +132,16 @@
     "sha256": "328568b4a03466f69712eaf0746cecf8033ed3c0dca17bd61641795c2c853b9b"
   },
   "assets/upstream/cloud-screen.webp": {
-    "bytes": 15898,
-    "sha256": "e69a18fdbb4a4ed224f1aef00abf02cc61e621e8d0153907bf960d0141511c72"
+    "bytes": 13506,
+    "sha256": "cacc640020e6b0d23f5e95c5ff93f36536a2d180414102d81e482a61c88e5983"
   },
   "assets/upstream/code-screen.webp": {
     "bytes": 39342,
     "sha256": "29e808243a013a635f42b01e0e7509f2c9d2cb4213509a5546ad81eb17a86703"
   },
   "assets/upstream/image-screen.webp": {
-    "bytes": 45838,
-    "sha256": "9c81f9440e0a92d5113503eb7b42402a4ad81c30202dcf2d36bfb937f9461ac3"
+    "bytes": 38336,
+    "sha256": "ce3dba8214628983051d97d9adaa79d7e13f790a17b63c2209f5a77aef7a571d"
   },
   "assets/upstream/immich.svg": {
     "bytes": 2053,
