@@ -1,5 +1,35 @@
 # Website verification — 30 October 2026
 
+## Core navigation and documentation (design 1.0.3)
+
+The shared header/footer now includes Core. Its explicit publication flag remains
+false until the independent Core project site has been deployed and checked; the
+interim link opens its existing GitHub repository. `/docs/#core` and `/docs/#dps`
+are real reading-path anchors with maintained source links marked “View on GitHub”.
+The theme export includes the shared navigation data/renderer and records an exact
+clean source commit alongside its SHA-256 manifest. The production homepage
+scenery, source, CNAME and application publication flags are unchanged.
+
+- Python build and all nine-page static checks pass, including the new Core
+  destination and documentation anchors. `git diff --check` passes.
+- Chromium 154 / Playwright 1.62.1: 40 route/width checks and 16 axe scans pass
+  without detected violations; native menu, keyboard, no JavaScript, reduced
+  motion and the existing 200% text check pass.
+- Additional Chromium and Firefox 153 documentation checks at 200% text size:
+  320, 390, 801, 1440 and 1920px, without horizontal overflow. These exposed and
+  fixed a narrow desktop navigation row and a long lead-text word. The navigation
+  can wrap while retaining the normal layout at ordinary text size.
+- Header thresholds 801, 820, 900, 1000, 1100, 1280 and 1440px were inspected;
+  navigation and branding fit. Core and DPS anchor targets enter the viewport
+  at desktop/mobile sizes.
+- Actual [desktop](../review/core-navigation-desktop.webp) and
+  [mobile](../review/core-navigation-mobile.webp) documentation renders were
+  reviewed. All body copy and link names remain English.
+- CSS and JavaScript together: **7,102 gzip bytes**. Images/fonts are unchanged;
+  this scoped navigation update has no new Lighthouse run. Earlier scores remain
+  dated lab measurements, not field data.
+- Existing WebKit host-library limitation remains; no Safari result is claimed.
+
 ## Visual finishing (design 1.0.2)
 
 Implemented the owner's follow-up refinements: Immich increases from 36 to 46px,

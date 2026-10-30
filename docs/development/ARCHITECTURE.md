@@ -1,4 +1,4 @@
-# Static publishing and shared design v1.0.2
+# Static publishing and shared design v1.0.3
 
 `site/pages/` contains page bodies. `site/templates/` owns the common HTML head,
 navigation and footer. `site/data/applications.json` is the single application
@@ -52,14 +52,38 @@ python3 -m http.server 8002 --bind 127.0.0.1 --directory /tmp/theme-preview
 # Open http://127.0.0.1:8002/volparossa-example/
 ```
 
-The exporter copies versioned tokens, CSS, JS, local fonts/notices, logo,
-head/header/footer sources and a complete example. It emits a SHA-256 manifest.
+The exporter requires a clean committed source and records its exact Git SHA.
+It copies versioned tokens, CSS, JS, local fonts/notices, original logo/favicon,
+upstream marks and notices, head/header/footer sources, central navigation and
+project/application data, and the shared navigation renderer. It emits a SHA-256
+manifest. Use `--source-only` to omit the example and library social image when
+vendoring a project's own page. See [the shared theme contract](../../site/shared-theme.md).
 Copy from an exact reviewed website commit (or a future version tag), record
 that commit in the consumer repository and commit the copied files there.
 Updates are explicit vendor-update PRs. There is no runtime fetch from a moving
 main branch. Retain the relative `assets/...` paths; set the new title, content,
 canonical, metadata, application active state and sitemap before publication.
 The example stays `noindex` until replaced with the real application content.
+
+## Core project and central navigation
+
+`site/data/navigation.json` and `scripts/shared_navigation.py` define the shared
+header and footer. The Core project imports these exact files with the theme,
+sets `active='core'`, and overrides only its own canonical and GitHub repository.
+Its logo and general Documentation/Get involved links return to the homepage.
+Social-image metadata is supplied by each site's builder through the shared
+layout, so a Core page can use its harbour image without forking the head.
+
+`site/data/projects.json` selects the Core destination. It remains the real
+repository until `https://volparossa.org/volparossa/` has been successfully
+published and verified. Enabling the flag changes navigation without inventing
+a local copy of the project page. The Core repository owns its own Pages output;
+the homepage's CNAME, publication source and root content remain unchanged.
+
+`/docs/#core` and `/docs/#dps` are real central portal anchors. They link to the
+maintained architecture/privacy and DPS source documents with “View on GitHub”.
+DPS is a shared service in research and development, not a sixth Core layer or a
+released positioning guarantee.
 
 ## Central documentation later
 

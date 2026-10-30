@@ -6,6 +6,9 @@ and scroll through all lazy images before capture; interactive checks retain
 normal rendering behaviour. DPR 1, desktop 1440 CSS pixels, mobile 390 pixels. Homepage and worktable
 captures are updated for the visual finishing update (design 1.0.2).
 
+- [Core navigation and central documentation — desktop](core-navigation-desktop.webp)
+- [Core navigation and central documentation — mobile](core-navigation-mobile.webp)
+- [Core navigation accessibility results](core-navigation-results.json)
 - [Full desktop page](desktop.webp)
 - [Full mobile page](mobile.webp)
 - [Mobile hero detail](mobile-hero.webp)
