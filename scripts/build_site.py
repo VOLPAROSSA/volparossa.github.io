@@ -68,10 +68,11 @@ def featured(app, text_brands):
     if not text_brands:
         file = {'code':'opencode','image':'immich','cloud':'opencloud'}[ident]
         logo = f'<span class="upstream-mark"><img src="assets/upstream/{file}.svg" width="{126 if ident == "cloud" else 30}" height="42" alt="" class="{"wide-logo" if ident == "cloud" else ""}"></span>'
+    destination_note = 'Project website · VOLPAROSSA' if app['published'] else 'Project repository · GitHub ↗'
     mark = f'<a class="upstream {"" if logo else "fallback"}" href="{app["upstream_url"]}">{logo}<span>Built on {upstream}</span></a>'
     return f'''<article class="app-card {ident}" aria-labelledby="app-{ident}">
 <div class="device-view"><picture class="mobile-device"><source type="image/webp" media="(max-width: 650px)" srcset="assets/library/{ident}-mobile.webp"><img src="assets/library/{ident}-mobile.jpg" width="{mobile_width}" height="{mobile_height}" alt="" loading="lazy" decoding="async"></picture>{screens(ident)}</div>
-<div class="app-content"><h3 id="app-{ident}">{name}</h3><p class="tagline">{app['tagline']}</p>{mark}<p class="app-description">{escape(app['description'])}</p><span class="status">{app['status']}</span><a class="button primary" href="{app['publication_url'] if app['published'] else app['repository']}">Explore {name} <span aria-hidden="true">→</span></a><p class="app-destination">Project repository · GitHub ↗</p></div></article>'''
+<div class="app-content"><h3 id="app-{ident}">{name}</h3><p class="tagline">{app['tagline']}</p>{mark}<p class="app-description">{escape(app['description'])}</p><span class="status">{app['status']}</span><a class="button primary" href="{app['publication_url'] if app['published'] else app['repository']}">Explore {name} <span aria-hidden="true">→</span></a><p class="app-destination">{destination_note}</p></div></article>'''
 
 ICONS = {
 'Network':'<circle cx="12" cy="5" r="3"/><circle cx="5" cy="20" r="3"/><circle cx="22" cy="20" r="3"/><path d="m10 8-4 9m8-9 7 9M8 20h11"/>',
@@ -102,7 +103,9 @@ def app_rows(apps):
     for a in apps:
         up=f'Built on {escape(a["upstream"])}' if a['upstream'] else 'Original research'
         scope=f'<p class="scope">{escape(a["scope"])}</p>' if a.get('scope') else ''
-        rows.append(f'<li class="application-row" id="{a["id"]}"><div><h2>{a["name"]}</h2><p class="upstream-line">{up}</p></div><div><p>{escape(a["description"])}</p>{scope}</div><div class="row-action"><span class="status">{a["status"]}</span><a class="text-link" href="{a["publication_url"] if a["published"] else a["repository"]}">Explore {a["name"]} · GitHub ↗</a></div></li>')
+        destination_label = f'Explore {a["name"]} →' if a['published'] else f'Explore {a["name"]} · GitHub ↗'
+        repository_link = f'<a class="text-link" href="{a["repository"]}">Source on GitHub ↗</a>' if a['published'] else ''
+        rows.append(f'<li class="application-row" id="{a["id"]}"><div><h2>{a["name"]}</h2><p class="upstream-line">{up}</p></div><div><p>{escape(a["description"])}</p>{scope}</div><div class="row-action"><span class="status">{a["status"]}</span><a class="text-link" href="{a["publication_url"] if a["published"] else a["repository"]}">{destination_label}</a>{repository_link}</div></li>')
     return ''.join(rows)
 
 PAGES = {
