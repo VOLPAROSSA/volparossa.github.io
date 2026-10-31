@@ -53,7 +53,7 @@ Code was published on 31 October 2026 at
 Its live HTML and loaded assets matched the production build in Chromium and
 Firefox at mobile and desktop widths, including Firefox at 2560px. Code's CTAs
 now open that site; its source-repository links and development status remain.
-Image remains unpublished and its CTAs use its GitHub repository.
+Image is also published; its verified destination is selected by the application registry.
 
 The reusable example at `examples/volparossa-application/` exercises nested asset
 paths. To bootstrap a genuinely independent site with its own asset directory:
@@ -106,6 +106,14 @@ Its product website publication flag is enabled after Image PR #16 and successfu
 Pages run 41237466549. Live HTML and loaded assets match the checked production
 build; Chromium and Firefox desktop/mobile renders, including 2560px Firefox,
 passed. The website does not change Image's development status.
+
+## Browser documentation entrance
+
+`/docs/#browser` adds the Firefox integration, privacy/default-extension guides and
+the shared-brain goal and design from Core. The current local execution proof is
+a separate reading link, not the intended final architecture. Browser remains
+unpublished in the application registry until its project page is live and verified;
+Code, Image and Cloud remain the featured homepage applications.
 
 ## Central documentation later
 
