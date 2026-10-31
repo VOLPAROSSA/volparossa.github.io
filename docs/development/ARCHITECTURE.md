@@ -102,8 +102,10 @@ released positioning guarantee.
 `/docs/#image` adds six source links for photo-library snapshots, the Core storage
 bridge, recovery operations, Android/iOS/web integration and the upstream Immich
 foundation. The Image repository remains the owner of these technical guides.
-Its product website publication flag stays false until that separate page has
-been deployed and verified. The website does not change Image's development status.
+Its product website publication flag is enabled after Image PR #16 and successful
+Pages run 41237466549. Live HTML and loaded assets match the checked production
+build; Chromium and Firefox desktop/mobile renders, including 2560px Firefox,
+passed. The website does not change Image's development status.
 
 ## Central documentation later
 
