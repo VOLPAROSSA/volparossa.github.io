@@ -47,7 +47,13 @@ Cloud was published on 30 October 2026 at
 Its live HTML and assets matched the production build in Chromium and Firefox,
 including mobile and 2560px desktop checks. Cloud's CTAs now open that site;
 the application directory also retains a separate source-repository link.
-Code and Image remain unpublished and their CTAs use their GitHub repositories.
+Code was published on 31 October 2026 at
+`https://volparossa.org/volparossa-code/` by
+[Pages run 41229615143](https://github.com/VOLPAROSSA/volparossa-code/actions/runs/41229615143).
+Its live HTML and loaded assets matched the production build in Chromium and
+Firefox at mobile and desktop widths, including Firefox at 2560px. Code's CTAs
+now open that site; its source-repository links and development status remain.
+Image remains unpublished and its CTAs use its GitHub repository.
 
 The reusable example at `examples/volparossa-application/` exercises nested asset
 paths. To bootstrap a genuinely independent site with its own asset directory:
