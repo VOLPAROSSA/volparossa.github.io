@@ -97,6 +97,14 @@ maintained architecture/privacy and DPS source documents with â€œView on GitHubâ
 DPS is a shared service in research and development, not a sixth Core layer or a
 released positioning guarantee.
 
+## Image documentation entrance
+
+`/docs/#image` adds six source links for photo-library snapshots, the Core storage
+bridge, recovery operations, Android/iOS/web integration and the upstream Immich
+foundation. The Image repository remains the owner of these technical guides.
+Its product website publication flag stays false until that separate page has
+been deployed and verified. The website does not change Image's development status.
+
 ## Central documentation later
 
 `/docs/` is a curated entry point, not a second copy of the technical manuals.
