@@ -111,8 +111,13 @@ passed. The website does not change Image's development status.
 
 `/docs/#browser` adds the Firefox integration, privacy/default-extension guides and
 the shared-brain goal and design from Core. The current local execution proof is
-a separate reading link, not the intended final architecture. Browser remains
-unpublished in the application registry until its project page is live and verified;
+a separate reading link, not the intended final architecture. Browser is published
+at `https://volparossa.org/volparossa-browser/` after Browser PR #22 and successful
+Pages run 41250155361 (merge `83c973c3204653655a117756bde20ee03f221822`).
+Live HTML and loaded assets matched the checked production artifact in Chromium
+and Firefox at 390/1440 px, plus 2560 px Firefox. The canonical URL, indexable
+metadata, sitemap and Browser documentation anchor were verified. The application
+registry now exposes Explore Browser while retaining Integration in development.
 Code, Image and Cloud remain the featured homepage applications.
 
 ## Central documentation later
