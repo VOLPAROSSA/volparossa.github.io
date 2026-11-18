@@ -7,6 +7,7 @@ from pathlib import Path
 import shutil
 import subprocess
 from build_site import ROOT, VERSION
+from shared_navigation import add_application_items
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output', type=Path, required=True, help='New or empty destination')
@@ -30,6 +31,10 @@ for name in ('opencode.svg','immich.svg','opencloud.svg','OPENCODE-LICENSE.txt',
     shutil.copy2(ROOT/'assets/upstream'/name,output/'assets/upstream'/name)
 shutil.copytree(ROOT/'site/templates',output/'templates')
 shutil.copytree(ROOT/'site/data',output/'data')
+nav_path = output/'data/navigation.json'
+nav = json.loads(nav_path.read_text())
+add_application_items(nav, json.loads((output/'data/applications.json').read_text()))
+nav_path.write_text(json.dumps(nav, indent=2) + '\n')
 (output/'shared').mkdir()
 shutil.copy2(ROOT/'scripts/shared_navigation.py',output/'shared/navigation.py')
 (output/'notices').mkdir()
