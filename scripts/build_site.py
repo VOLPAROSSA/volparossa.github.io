@@ -6,12 +6,12 @@ import json
 from pathlib import Path
 import re
 import shutil
-from shared_navigation import site_links, navigation_links
+from shared_navigation import site_links, navigation_links, add_application_items
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://volparossa.org'
 CORE = 'https://github.com/VOLPAROSSA/volparossa'
-VERSION = '1.0.3'
+VERSION = '1.1.0'
 GITHUB_ICON = (ROOT/'assets/icons/github.svg').read_text().strip().replace('<svg ', '<svg class="github-icon" aria-hidden="true" focusable="false" ', 1)
 
 def render(text, values):
@@ -128,6 +128,7 @@ PAGES = {
 def build(output, text_brands=False):
     apps=json.loads((ROOT/'site/data/applications.json').read_text())
     navigation=json.loads((ROOT/'site/data/navigation.json').read_text())
+    add_application_items(navigation, apps)
     projects=json.loads((ROOT/'site/data/projects.json').read_text())
     for path,(name,title,description) in PAGES.items():
         depth=path.count('/')
