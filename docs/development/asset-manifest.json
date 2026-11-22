@@ -167,6 +167,10 @@
     "bytes": 1178,
     "sha256": "02bac3d2cb8c1091aeae61219803dadbb4364dd636e50f60567d25dfcde7c12c"
   },
+  "assets/radio/spotify.svg": {
+    "bytes": 697,
+    "sha256": "b9ec9bec7769c35643981586d6ea0d675aaf3871b32f8a291bcac7a87fff0bc1"
+  },
   "assets/radio/tidal.svg": {
     "bytes": 305,
     "sha256": "99f2c0efba4e756b58da03fa35b5d163f1033e77671f1bf2931df29f8694e4af"

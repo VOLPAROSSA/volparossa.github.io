@@ -6,7 +6,7 @@ const site = process.env.SITE_QA_URL || 'http://127.0.0.1:8000';
 const playlist = 'https://open.spotify.com/embed/playlist/6ricSn5ycy3agLA5SmL5dM';
 const services = [
   'link.deezer.com', 'music.youtube.com', 'open.qobuz.com', 'tidal.com',
-  'music.amazon.com', 'listenbrainz.org', 'soundcloud.com'
+  'music.amazon.com', 'listenbrainz.org', 'soundcloud.com', 'open.spotify.com'
 ];
 
 for (const engine of [chromium, firefox, webkit]) {
