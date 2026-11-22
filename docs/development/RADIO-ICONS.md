@@ -8,7 +8,7 @@ The seven SVG files in `assets/radio/` identify the services hosting the linked 
 | YouTube Music | `youtube-music.svg` | Monochrome path from Simple Icons. [Icon](https://github.com/simple-icons/simple-icons/blob/585b247ff866e6d359124bcf3d63c4346dfaed03/icons/youtubemusic.svg) · [Google brand resources](https://partnermarketinghub.withgoogle.com/#/brands) |
 | Qobuz | `qobuz.svg` | Original Qobuz black-and-white favicon. [Qobuz asset](https://static.qobuz.com/images/favicon/favicon.svg) |
 | TIDAL | `tidal.svg` | Monochrome path from Simple Icons. [Icon](https://github.com/simple-icons/simple-icons/blob/585b247ff866e6d359124bcf3d63c4346dfaed03/icons/tidal.svg) · [TIDAL press](https://tidal.com/press) |
-| Amazon Music | `amazon-music.svg` | Amazon's white stacked mark with a dark backing added for contrast. Original paths and proportions preserved. [Amazon Music asset](https://m.media-amazon.com/images/G/01/music/logo/1.0/white_stacked_amazon_music_smile_117x80.svg) |
+| Amazon Music | `amazon-music.svg` | The two original paths of the Amazon smile, in black, centered on a transparent square. [Amazon Music asset](https://m.media-amazon.com/images/G/01/music/logo/1.0/white_stacked_amazon_music_smile_117x80.svg) |
 | ListenBrainz | `listenbrainz.svg` | Original two-colour icon from the MetaBrainz ListenBrainz project. [Pinned source](https://github.com/metabrainz/listenbrainz-server/blob/490aa14cd9903eb5e20336bedc0138cc69c4602d/frontend/img/listenbrainz_logo_icon.svg) |
 | SoundCloud | `soundcloud.svg` | Monochrome path from Simple Icons. [Icon](https://github.com/simple-icons/simple-icons/blob/585b247ff866e6d359124bcf3d63c4346dfaed03/icons/soundcloud.svg) · [SoundCloud press](https://press.soundcloud.com/) |
 

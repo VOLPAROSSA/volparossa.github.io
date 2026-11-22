@@ -65,6 +65,9 @@ for (const engine of [chromium, firefox, webkit]) {
       assert.equal(external.length, 1);
       assert.deepEqual(await section.locator('.radio-stations a').evaluateAll(links => links.map(a => a.hostname)), services);
       await page.waitForFunction(() => [...document.querySelectorAll('.radio-stations img')].every(i => i.naturalWidth > 0));
+      const tiles = await section.locator('.radio-stations img').evaluateAll(images =>
+        images.map(image => [image.offsetWidth, image.offsetHeight]));
+      assert(tiles.every(([w, h]) => w >= 44 && w === h && w === tiles[0][0]), 'Platform tiles must be equally sized squares');
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       if (touch) await section.getByRole('button', {name:'Close VOLPAROSSA Radio'}).tap();
       else await page.keyboard.press('Escape');
