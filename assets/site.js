@@ -47,3 +47,42 @@ for (const group of document.querySelectorAll('.applications-menu')) {
   });
   if (mobile) mobile.addEventListener('toggle', () => { if (!mobile.open) show(false); });
 }
+
+const radioButton = document.querySelector('.shelf-radio');
+if (radioButton) {
+  const drawer = document.getElementById(radioButton.getAttribute('aria-controls'));
+  const heading = drawer.querySelector('h2');
+  const player = drawer.querySelector('.radio-player');
+
+  function closeRadio() {
+    radioButton.setAttribute('aria-expanded', 'false');
+    radioButton.focus();
+    drawer.hidden = true;
+    player.replaceChildren();
+  }
+
+  radioButton.hidden = false;
+  radioButton.addEventListener('click', () => {
+    if (!drawer.hidden) {
+      closeRadio();
+      return;
+    }
+    const frame = document.createElement('iframe');
+    frame.title = 'VOLPAROSSA Radio on Spotify';
+    frame.src = player.dataset.spotifySrc;
+    frame.width = '100%';
+    frame.height = '152';
+    frame.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    frame.allowFullscreen = true;
+    frame.loading = 'lazy';
+    player.append(frame);
+    radioButton.setAttribute('aria-expanded', 'true');
+    drawer.hidden = false;
+    heading.focus({preventScroll: true});
+    drawer.scrollIntoView({block: 'start'});
+  });
+  drawer.querySelector('.radio-close').addEventListener('click', closeRadio);
+  drawer.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeRadio();
+  });
+}

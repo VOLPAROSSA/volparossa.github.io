@@ -7,7 +7,8 @@
     "build": "python3 scripts/build_site.py",
     "check": "python3 scripts/check_site.py",
     "qa": "node scripts/browser_check.mjs",
-    "qa:scenes": "node scripts/scene_check.mjs"
+    "qa:scenes": "node scripts/scene_check.mjs",
+    "qa:radio": "node scripts/radio_check.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

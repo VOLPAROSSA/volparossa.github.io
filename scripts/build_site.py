@@ -36,30 +36,21 @@ SCREENS = {
 }
 MOBILE_CROPS = {'code': (0, 150, 600, 560), 'image': (550, 240, 500, 470), 'cloud': (1050, 230, 486, 480)}
 
-def screen_transform(size, corners):
-    """Project a rectangular image plane onto the four measured aperture corners."""
-    w, h = size
-    (x0,y0),(x1,y1),(x2,y2),(x3,y3) = corners
-    dx1, dx2, dx3 = x1-x2, x3-x2, x0-x1+x2-x3
-    dy1, dy2, dy3 = y1-y2, y3-y2, y0-y1+y2-y3
-    denominator = dx1*dy2-dx2*dy1
-    g = (dx3*dy2-dx2*dy3)/denominator
-    k = (dx1*dy3-dx3*dy1)/denominator
-    matrix = ((x1-x0+g*x1)/w, (y1-y0+g*y1)/w, 0, g/w,
-              (x3-x0+k*x3)/h, (y3-y0+k*y3)/h, 0, k/h,
-              0, 0, 1, 0, x0, y0, 0, 1)
-    return 'matrix3d('+','.join(f'{v:.10g}' for v in matrix)+')'
+def screen_bounds(corners):
+    xs, ys = zip(*corners)
+    return min(xs), min(ys), max(xs) - min(xs), max(ys) - min(ys)
 
 def screens(app=None):
     crop = MOBILE_CROPS[app] if app else (0, 0, 1536, 710)
     images = []
     for ident in ([app] if app else SCREENS):
-        size, corners = SCREENS[ident]
-        w,h = size
-        images.append(f'<img xmlns="http://www.w3.org/1999/xhtml" class="screen screen-{ident}" src="assets/upstream/{ident}-screen.webp" width="{w}" height="{h}" style="width:{w}px;height:{h}px;transform:{screen_transform(size,corners)}" alt="" loading="lazy" decoding="async">')
-    # SVG scales the fixed coordinate plane, including its CSS perspective,
-    # uniformly with the photograph. No viewport arithmetic or runtime JS.
-    return f'<svg class="device-screens {"mobile-screens" if app else "panorama-screens"}" viewBox="{" ".join(map(str,crop))}" width="{crop[2]}" height="{crop[3]}" aria-hidden="true" focusable="false"><foreignObject x="0" y="0" width="1536" height="710">'+''.join(images)+'</foreignObject></svg>'
+        _, corners = SCREENS[ident]
+        x, y, w, h = screen_bounds(corners)
+        images.append(f'<image class="screen" href="assets/upstream/{ident}-worktable.webp" x="{x}" y="{y}" width="{w}" height="{h}"/>')
+    # Native SVG image elements share the photograph's scale in every engine.
+    cls = 'mobile-screens' if app else 'panorama-screens'
+    viewbox = ' '.join(map(str, crop))
+    return f'<svg class="device-screens {cls}" viewBox="{viewbox}" width="{crop[2]}" height="{crop[3]}" aria-hidden="true" focusable="false">' + ''.join(images) + '</svg>'
 
 def featured(app, text_brands):
     ident, name, upstream = app['id'], app['name'], app['upstream']

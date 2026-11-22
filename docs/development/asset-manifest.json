@@ -35,6 +35,14 @@
     "bytes": 154312,
     "sha256": "dcaf75e1df1b2271c49f310a2425f227881186fcace968b0591a6acdfbe69a7a"
   },
+  "assets/library/chapter-radio-shelf-416.webp": {
+    "bytes": 57930,
+    "sha256": "099d34344dfd1f31912f017f9c355e8548889dc7e6226b6e24394da512dbb7a7"
+  },
+  "assets/library/chapter-radio-shelf-832.webp": {
+    "bytes": 193160,
+    "sha256": "5a2676b44946ffc9538fdea16336c5b7a537b00a25d442b5f1423cb8e4058008"
+  },
   "assets/library/cloud-mobile.jpg": {
     "bytes": 57643,
     "sha256": "f09ea8a5b037460dd33cc3c009b0bc4bf5349633bd6853ba0a2d082a77135a57"
@@ -139,6 +147,34 @@
     "bytes": 19082,
     "sha256": "6f50203d64a1a03512ba05dc1f22445aee9c64c937e7ca870932e37bd90b041d"
   },
+  "assets/radio/amazon-music.svg": {
+    "bytes": 9113,
+    "sha256": "a8027f373f5c997ce34ee91dcd019d3bc2c295c7d929340a99401debe127f46d"
+  },
+  "assets/radio/deezer.svg": {
+    "bytes": 1198,
+    "sha256": "928ee1c513ccf49c125956f8cb300558701a112eb2adaede966d032408cc480c"
+  },
+  "assets/radio/listenbrainz.svg": {
+    "bytes": 283,
+    "sha256": "8f80224f24b50ef1826e11b4bff12f274a32bf7ea15059eaf52675a06882b7c3"
+  },
+  "assets/radio/qobuz.svg": {
+    "bytes": 1349,
+    "sha256": "59f10306a0b221bb0ab7dc6e6972426ddfdbe8ca536b8860fd62c31de6926837"
+  },
+  "assets/radio/soundcloud.svg": {
+    "bytes": 1178,
+    "sha256": "02bac3d2cb8c1091aeae61219803dadbb4364dd636e50f60567d25dfcde7c12c"
+  },
+  "assets/radio/tidal.svg": {
+    "bytes": 305,
+    "sha256": "99f2c0efba4e756b58da03fa35b5d163f1033e77671f1bf2931df29f8694e4af"
+  },
+  "assets/radio/youtube-music.svg": {
+    "bytes": 449,
+    "sha256": "f96c8a67f93717df8f9f57b0e96638b19e8fd80a165ddf83598592b5342612f5"
+  },
   "assets/social.jpg": {
     "bytes": 264317,
     "sha256": "328568b4a03466f69712eaf0746cecf8033ed3c0dca17bd61641795c2c853b9b"
@@ -147,13 +183,25 @@
     "bytes": 13506,
     "sha256": "cacc640020e6b0d23f5e95c5ff93f36536a2d180414102d81e482a61c88e5983"
   },
+  "assets/upstream/cloud-worktable.webp": {
+    "bytes": 10268,
+    "sha256": "753e5c9853de9d8b148a96eb8542f5704b8a45af89fbf870df77f8231f59d23b"
+  },
   "assets/upstream/code-screen.webp": {
     "bytes": 39342,
     "sha256": "29e808243a013a635f42b01e0e7509f2c9d2cb4213509a5546ad81eb17a86703"
   },
+  "assets/upstream/code-worktable.webp": {
+    "bytes": 34732,
+    "sha256": "5979be380a9adcc1d1b02289fcae624d36b51ca92808df2646ec119359896c2d"
+  },
   "assets/upstream/image-screen.webp": {
     "bytes": 38336,
     "sha256": "ce3dba8214628983051d97d9adaa79d7e13f790a17b63c2209f5a77aef7a571d"
+  },
+  "assets/upstream/image-worktable.webp": {
+    "bytes": 26358,
+    "sha256": "ac4f696745f731c80067b12b51d9c62fe9ab934551a30261fd402bff584177df"
   },
   "assets/upstream/immich.svg": {
     "bytes": 2053,

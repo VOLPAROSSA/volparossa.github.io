@@ -15,7 +15,9 @@ the supplied emblem as the reference for a physical gold print on the mug.
 | `assets/library/hero-*` | New clean image generation from the top library scene in reference 01. Separate portrait mobile composition preserves the arch and resting fox. |
 | `assets/library/worktable-*`, `{code,image,cloud}-mobile.*` | New clean image generation from reference 02; blank device displays. Owner-requested image edit adds a gold VOLPAROSSA emblem to the ceramic mug. The lossless 1536×710 `worktable-master.png` retains the edited scene for future exports; WebP/JPEG desktop and mobile variants use the existing coordinates. Interface layers remain separate. |
 | `assets/library/shared-*` | New clean generation of reference 01's cooperative reading table. |
-| `assets/library/chapter-*` | New clean generation of reference 01's closing fox balcony. |
+| `assets/library/chapter-{768,1536}.*` | New clean generation of reference 01's closing fox balcony. |
+| `assets/library/chapter-radio-shelf-*.webp` | Localized image edit of the antique instrument and loose books on the right shelf. The transparent 416×555 crop sits at (1120, 285) on the original 1536×1024 balcony. The two resolutions share the same meter coordinates. |
+| `assets/radio/*.svg` | Local music platform marks. See [Radio icon sources](RADIO-ICONS.md). |
 | `assets/social.jpg` | 1200×630 technical crop of the new hero. |
 
 Artwork was generated with OpenAI image generation on 30 October 2026. The
@@ -42,6 +44,8 @@ labelled as upstream examples, never evidence of a completed integration.
 | `assets/upstream/code-screen.webp` | [OpenCode terminal screenshot](https://github.com/anomalyco/opencode/blob/dev/packages/web/src/assets/lander/screenshot.png) | Cropped window padding, resized. Actual upstream TUI and its public sample task, not the mockup's invented editor. MIT notice retained as `OPENCODE-LICENSE.txt`. |
 | `assets/upstream/image-screen.webp` | [Immich public sample library](https://github.com/immich-app/immich/blob/main/docs/docs/features/img/tag-view.webp) | Complete official tag-view screenshot; sample architecture and scenery, no private user library. Resized to 900×603 without cropping. AGPL notice retained as `IMMICH-LICENSE.txt`. |
 | `assets/upstream/cloud-screen.webp` | [OpenCloud Files documentation](https://github.com/opencloud-eu/docs/blob/main/docs/user/files-and-folders/img/favorites/favorites-personal.png) | Public sample favourites grid; crop (8,61)–(1272,711) omits the profile header and outer frame, retaining all three files, navigation and status; resized to 1000×514. Source: OpenCloud GmbH. AGPL documentation notice retained as `OPENCLOUD-DOCS-LICENSE.txt`. |
+
+The three `assets/upstream/*-worktable.webp` files are perspective projections of the original screenshots. To refresh them, run `python3 scripts/prepare_worktable_screens.py` with ImageMagick 7 installed. The desktop and mobile views place these transparent layers in the source photograph’s coordinates.
 
 Screenshot excerpting and technical resampling do not create new software
 functionality. The screens are decorative demonstrations of the tool category;
