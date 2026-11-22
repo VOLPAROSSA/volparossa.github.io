@@ -35,5 +35,64 @@
 </section>
 <section class="invitation" aria-labelledby="chapter-heading">
   <div class="invitation-copy"><span class="ornament" aria-hidden="true">✦</span><p class="eyebrow">There is a place for you here</p><h2 id="chapter-heading">The next chapter<br>is ours to build.</h2><p>Bring a question, a skill or a different perspective.<br>Help make shared technology useful to everyone.</p><a class="button primary" href="contribute/">Get involved <span aria-hidden="true">→</span></a><div class="invitation-links"><a href="docs/">Read the documentation</a><a href="https://github.com/VOLPAROSSA/volparossa/blob/main/docs/community/SUPPORTING.md">Support the project ↗</a></div></div>
-  {{chapter_picture}}
+  <div class="scene chapter-window">
+    <div class="chapter-art">
+      {{chapter_picture}}
+      <img class="shelf-edit" alt="" width="416" height="555" loading="lazy" decoding="async"
+           src="assets/library/chapter-radio-shelf-416.webp"
+           srcset="assets/library/chapter-radio-shelf-416.webp 416w, assets/library/chapter-radio-shelf-832.webp 832w"
+           sizes="(max-width: 800px) max(27.1vw, 123px), max(17.34vw, 195px)">
+      <button type="button" class="shelf-radio" aria-label="VOLPAROSSA Radio" aria-expanded="false" aria-controls="volparossa-radio" hidden>
+        <svg viewBox="0 0 363 204" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="radio-glass" cy="68%" r="80%">
+              <stop offset="0%" stop-color="#fff6b8"/><stop offset="62%" stop-color="#ffd876"/>
+              <stop offset="100%" stop-color="#cd812f"/>
+            </radialGradient>
+            <g id="radio-scale">
+              <rect width="34" height="26" rx="1" fill="url(#radio-glass)"/>
+              <path d="M3 13Q17 -1 31 13M3 10l2 3m1-6 2 3m3-5 1 3m5-5v4m6-2-1 3m6-1-2 3m5 0-2 3"
+                    stroke="#7b512c" stroke-width=".85" fill="none"/>
+              <path d="M12 25q5-5 10 0" stroke="#8f683c" fill="none"/>
+            </g>
+          </defs>
+          <g class="meter-light">
+            <use href="#radio-scale" x="209" y="58"/>
+            <use href="#radio-scale" x="256" y="58"/>
+            <path class="meter-needle left" d="M226 82l-5-17" stroke="#8a3913" stroke-width="1.3"/>
+            <path class="meter-needle right" d="M273 82l-5-17" stroke="#8a3913" stroke-width="1.3"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="volparossa-radio" class="radio-drawer" aria-labelledby="radio-heading" hidden>
+  <div class="radio-fold"><div class="radio-inner wrap">
+    <div class="radio-header">
+      <h2 id="radio-heading" tabindex="-1">VOLPAROSSA Radio</h2>
+      <button type="button" class="radio-close" aria-label="Close VOLPAROSSA Radio" title="Close radio">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+    <div class="radio-console">
+      <div>
+        <div class="radio-player" data-spotify-src="https://open.spotify.com/embed/playlist/6ricSn5ycy3agLA5SmL5dM?utm_source=generator&amp;si=ce81e73b1b6c4ecd"></div>
+        <a class="radio-spotify-link" href="https://open.spotify.com/playlist/6ricSn5ycy3agLA5SmL5dM">Open in Spotify ↗</a>
+      </div>
+      <div class="radio-services">
+        <h3>Also listen on</h3>
+        <ul class="radio-stations">
+          <li><a href="https://link.deezer.com/s/3529DpRgbnLCmdL5nZC8J"><img src="assets/radio/deezer.svg" alt="" width="28" height="28" loading="lazy"><span>Deezer</span></a></li>
+          <li><a href="https://music.youtube.com/playlist?list=PLaRJRfWsGZCo&amp;si=ruXpTc84KLbHCm9B"><img src="assets/radio/youtube-music.svg" alt="" width="28" height="28" loading="lazy"><span>YouTube Music</span></a></li>
+          <li><a href="https://open.qobuz.com/playlist/73917686"><img src="assets/radio/qobuz.svg" alt="" width="28" height="28" loading="lazy"><span>Qobuz</span></a></li>
+          <li><a href="https://tidal.com/playlist/7d61620f-c271-43cb-af9d-5d9ffec55c74"><img src="assets/radio/tidal.svg" alt="" width="28" height="28" loading="lazy"><span>TIDAL</span></a></li>
+          <li><a href="https://music.amazon.com/user-playlists/96582011a13344949fdf533815d870f7n13l?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=NL&amp;ref=dm_sh_0D1OkHakcw109ojC8cZXYZvqA"><img src="assets/radio/amazon-music.svg" alt="" width="28" height="28" loading="lazy"><span>Amazon Music</span></a></li>
+          <li><a href="https://listenbrainz.org/playlist/fc238000-e4bf-4741-8a2b-9903b99f8f26/"><img src="assets/radio/listenbrainz.svg" alt="" width="28" height="28" loading="lazy"><span>ListenBrainz</span></a></li>
+          <li><a href="https://soundcloud.com/volparossa/sets/volparossa-radio"><img src="assets/radio/soundcloud.svg" alt="" width="28" height="28" loading="lazy"><span>SoundCloud</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
 </section>
