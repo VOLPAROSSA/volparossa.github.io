@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Static semantic, path, metadata, asset and publication checks; no network."""
 import argparse
+from functools import cache
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -91,7 +92,7 @@ class Page(HTMLParser):
         if self.stack and self.stack[-1] == "title":
             self.title += data
 
-    def check(self):
+    def check(self, read_page):
         assert self.lang == "en", "Missing page language"
         assert "VOLPAROSSA" in self.title and len(self.title.strip()) > 15, "Missing descriptive title"
         assert self.has_main and self.has_skip, "Missing main landmark or skip link"
@@ -126,9 +127,7 @@ class Page(HTMLParser):
                 local = local / "index.html"
             assert local.is_file(), f"Missing local target: {value}"
             if local.suffix == ".html" and parsed.fragment:
-                target = Page(local)
-                target.feed(local.read_text())
-                assert unquote(parsed.fragment) in target.ids, f"Missing fragment: {value}"
+                assert unquote(parsed.fragment) in read_page(local).ids, f"Missing fragment: {value}"
         assert not self.errors, "\n".join(self.errors)
 
 
@@ -137,13 +136,19 @@ def main():
     parser.add_argument("--external-list", action="store_true", help="Print external link inventory without fetching")
     args = parser.parse_args()
     from build_site import PAGES
-    pages = []
-    for route in PAGES:
-        path = ROOT / (route if route.endswith(".html") else route + "index.html")
+
+    @cache
+    def read_page(path):
         page = Page(path)
         page.feed(path.read_text())
         page.close()
-        page.check()
+        return page
+
+    pages = []
+    for route in PAGES:
+        path = ROOT / (route if route.endswith(".html") else route + "index.html")
+        page = read_page(path)
+        page.check(read_page)
         pages.append(page)
     assert (ROOT / "CNAME").read_bytes() == b"volparossa.org", "Hosting CNAME changed"
     assert (ROOT / ".nojekyll").is_file(), "Missing static Pages marker"
